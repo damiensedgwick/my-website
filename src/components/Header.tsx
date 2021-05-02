@@ -19,6 +19,7 @@ export const Header = () => {
           {showMenu && <Menu />}
           <div>
             <button
+              name="menuButton"
               className="text-2xl md:text-4xl"
               onClick={() => setShowMenu(!showMenu)}
             >
