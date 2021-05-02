@@ -1,26 +1,30 @@
 import Head from "next/head";
 
-import { Header } from "../components/Header";
+import { Layout } from "../components/Layout";
 
 export default function Home() {
   return (
-    <div>
+    <Layout>
       <Head>
         <title>Damien Sedgwick | Frontend Developer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
-
-      <main
-        className="flex flex-col justify-center items-center"
-        style={{ height: "calc(100vh - 72px" }}
-      >
-        <h1 className="text-2xl md:text-4xl mb-4">Damien Sedgwick</h1>
-        <p>
-          <i>Coming soon...</i>
-        </p>
-      </main>
-    </div>
+      {/* Page Content */}
+      <section className="masthead px-6 md:px-0">
+        <div
+          className="container mx-auto flex flex-row justify-center items-center"
+          style={{ height: "calc(75vh)" }}
+        >
+          <div className="container mx-auto text-center">
+            <h1 className="text-3xl mb-3">Damien Sedgwick</h1>
+            <p>
+              <i>website under construction...</i>
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* /.Page Content */}
+    </Layout>
   );
 }
