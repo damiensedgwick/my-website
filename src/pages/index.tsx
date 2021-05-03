@@ -9,7 +9,7 @@ export default function Home() {
         <html lang="en-us" />
         <title>Damien Sedgwick | Frontend Developer</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
           content="Frontend Developer at Yozobi. Inquisitive and passionate React developer hacking on the world wide web!"
