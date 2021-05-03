@@ -1,20 +1,11 @@
-import Head from "next/head";
-
 import { Layout } from "../components/Layout";
 
 export default function Home() {
   return (
-    <Layout>
-      <Head>
-        <html lang="en-GB" />
-        <title>Damien Sedgwick | Frontend Developer</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Frontend Developer at Yozobi. Inquisitive and passionate React developer hacking on the world wide web!"
-        />
-      </Head>
-
+    <Layout
+      pageTitle="Damien Sedgwick | Frontend Developer"
+      pageDescription="Frontend Developer at Yozobi. Inquisitive and passionate React developer hacking on the world wide web!"
+    >
       {/* Page Content */}
       <section className="masthead px-6 md:px-0">
         <div
