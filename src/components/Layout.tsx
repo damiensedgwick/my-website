@@ -13,7 +13,8 @@ export const Layout = ({ pageTitle, pageDescription, children }: Props) => {
   return (
     <>
       <Head>
-        {/* <html lang="en-GB" />
+        <html lang="en-GB" />
+        {/* 
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" /> */}
