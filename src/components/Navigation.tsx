@@ -4,7 +4,7 @@ import { TiThMenuOutline } from "react-icons/ti";
 
 import { Menu } from "./Menu";
 
-export const Header = () => {
+export const Navigation = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
@@ -13,7 +13,7 @@ export const Header = () => {
         <div className="relative flex flex-row justify-between items-center">
           <div className="logo">
             <Link href="/">
-              <a className="text-2xl md:text-4xl">DKS</a>
+              <a className="text-4xl">DKS</a>
             </Link>
           </div>
           {showMenu && <Menu />}
@@ -21,7 +21,7 @@ export const Header = () => {
             <button
               name="menu"
               aria-label="menu"
-              className="text-2xl md:text-4xl"
+              className="text-4xl"
               onClick={() => setShowMenu(!showMenu)}
             >
               <TiThMenuOutline />
