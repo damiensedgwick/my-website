@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
-import { TiThMenuOutline } from "react-icons/ti";
+import { TiThMenuOutline, TiTimesOutline } from "react-icons/ti";
 
 import { Menu } from "./Menu";
 
@@ -24,7 +24,7 @@ export const Navigation = () => {
               className="text-4xl"
               onClick={() => setShowMenu(!showMenu)}
             >
-              <TiThMenuOutline />
+              {showMenu ? <TiTimesOutline /> : <TiThMenuOutline />}
             </button>
           </div>
         </div>

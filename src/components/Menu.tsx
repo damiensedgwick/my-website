@@ -7,7 +7,7 @@ import {
 
 export const Menu = () => {
   return (
-    <nav className="nav-links flex flex-col items-center absolute top-12 -right-2 md:relative md:flex-row md:top-0 md:right-0">
+    <nav className="nav-links flex flex-col items-center absolute top-12 right-0 md:relative md:flex-row md:top-0">
       <a
         className="text-4xl my-2 md:mx-2 md:my-0"
         href="mailto:damiensedgwick@icloud.com"

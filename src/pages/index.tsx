@@ -6,21 +6,28 @@ export default function Home() {
       pageTitle="Damien Sedgwick | Frontend Developer"
       pageDescription="Frontend Developer at Yozobi. Inquisitive and passionate React developer hacking on the world wide web!"
     >
-      {/* Page Content */}
       <section className="masthead px-6 md:px-0">
         <div
           className="container mx-auto flex flex-row justify-center items-center"
           style={{ height: "calc(75vh)" }}
         >
-          <div className="container mx-auto text-center">
-            <h1 className="text-3xl mb-3">Damien Sedgwick</h1>
-            <p>
-              <i>website under construction...</i>
+          <div className="container mx-auto text-center md:w-3/4">
+            <h1 className="text-lg md:text-2xl md:mb-2">Damien Sedgwick</h1>
+            <p className="text-2xl md:text-4xl pb-2">Frontend Developer</p>
+            <hr className="mb-2" />
+            <p className="text-left">
+              <i>
+                "Damien is one of the most adaptable developers I've had the
+                pleasure to work with. He's seems to be on a constant search for
+                knowledge which is one of the best traits a developer can have!
+                On top of this he brings a great atmosphere to the team which
+                makes him a great addition across industries, team sizes, and
+                roles."
+              </i>
             </p>
           </div>
         </div>
       </section>
-      {/* /.Page Content */}
     </Layout>
   );
 }
