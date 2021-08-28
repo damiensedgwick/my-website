@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/router";
 import { MdHome, MdInfo, MdPermContactCalendar, MdMenu } from "react-icons/md";
 import {
   AiFillLinkedin,
@@ -7,36 +8,44 @@ import {
   AiFillGithub,
 } from "react-icons/ai";
 
+const links = [
+  { title: "Home", path: "/", icon: <MdHome className="mx-auto text-2xl" /> },
+  {
+    title: "About",
+    path: "/about",
+    icon: <MdInfo className="mx-auto text-2xl" />,
+  },
+  {
+    title: "Contact",
+    path: "/contact",
+    icon: <MdPermContactCalendar className="mx-auto text-2xl" />,
+  },
+];
+
 export const BottomTabNav = () => {
   const [showBottomTabNavDrawer, setShowBottomTabNavDrawer] = useState(false);
+
+  const router = useRouter();
 
   return (
     <div className="fixed w-screen bottom-0 shadow-2xl border-t-2 border-gray-800">
       <ul className="flex flex-row justify-evenly items-center">
-        <li className="w-full text-center py-2 hover:bg-gray-100">
-          <Link href="/">
-            <a>
-              <MdHome className="mx-auto text-2xl" />
-              <span className="text-xs">Home</span>
-            </a>
-          </Link>
-        </li>
-        <li className="w-full text-center py-2 hover:bg-gray-100">
-          <Link href="/">
-            <a>
-              <MdInfo className="mx-auto text-2xl" />
-              <span className="text-xs">About</span>
-            </a>
-          </Link>
-        </li>
-        <li className="w-full text-center py-2 hover:bg-gray-100">
-          <Link href="/">
-            <a>
-              <MdPermContactCalendar className="mx-auto text-2xl" />
-              <span className="text-xs">Contact</span>
-            </a>
-          </Link>
-        </li>
+        {links.map((link) => (
+          <li
+            className={
+              router.pathname === link.path
+                ? "w-full text-center py-2 bg-gray-800 text-white"
+                : "w-full text-center py-2 hover:bg-gray-200"
+            }
+          >
+            <Link href={link.path}>
+              <a>
+                {link.icon}
+                <span className="text-xs">{link.title}</span>
+              </a>
+            </Link>
+          </li>
+        ))}
         <button
           className="w-full text-center mx-auto py-2 hover:bg-gray-100"
           onClick={() => setShowBottomTabNavDrawer(!showBottomTabNavDrawer)}
@@ -49,11 +58,11 @@ export const BottomTabNav = () => {
       <div
         className={
           showBottomTabNavDrawer
-            ? "h-44 sm:h-36 transition-all duration-500"
+            ? "h-44 transition-all duration-500"
             : "h-0 transition-all duration-500"
         }
       >
-        <div className="container mx-auto p-4 text-center border-t-2 border-gray-200">
+        <div className="container mx-auto p-4 text-center">
           <h6>
             Thank you for visiting my site, I'd love to to expand my network so
             why not connect <span role="img">😊</span>
