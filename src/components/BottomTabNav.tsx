@@ -32,6 +32,7 @@ export const BottomTabNav = () => {
       <ul className="flex flex-row items-center justify-evenly">
         {links.map((link) => (
           <li
+            key={link.path}
             className={
               router.pathname === link.path
                 ? showBottomTabNavDraw
@@ -52,7 +53,7 @@ export const BottomTabNav = () => {
           className={
             showBottomTabNavDraw
               ? "w-full text-center mx-auto py-2 bg-gray-800 text-white"
-              : "w-full text-center mx-auto py-2 hover:bg-gray-800 hover:text-white focus:bg-white focus:text-gray-800"
+              : "w-full text-center mx-auto py-2 hover:bg-gray-800 hover:text-white focus:bg-white focus:text-gray-800 active:bg-white active:text-gray-800"
           }
           onClick={(e) => {
             setShowBottomTabNavDraw(!showBottomTabNavDraw);
