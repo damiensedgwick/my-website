@@ -85,7 +85,7 @@ export const BottomTabNav = () => {
               </a>
             </li>
             <li>
-              <a href="https://github.com/damiensedgwick/" target="_blank">
+              <a href="https://www.polywork.com/dks" target="_blank">
                 <AiFillHeart className="text-4xl" />
               </a>
             </li>
