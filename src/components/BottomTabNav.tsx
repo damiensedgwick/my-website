@@ -75,7 +75,7 @@ export const BottomTabNav = () => {
       >
         <div className="container p-4 mx-auto text-center">
           <h6>
-            Thanks for visiting my site, I'd love to to expand my network so why
+            Thanks for visiting my site, I'd love to expand my network so why
             not connect <span role="img">😊</span>
           </h6>
           <ul className="flex flex-row items-center justify-around py-4">
