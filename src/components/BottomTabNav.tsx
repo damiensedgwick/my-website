@@ -35,7 +35,7 @@ export const BottomTabNav = () => {
             className={
               router.pathname === link.path
                 ? "w-full text-center py-2 bg-gray-800 text-white"
-                : "w-full text-center py-2 hover:bg-gray-200"
+                : "w-full text-center py-2 hover:bg-gray-800 hover:text-white"
             }
           >
             <Link href={link.path}>
@@ -47,7 +47,7 @@ export const BottomTabNav = () => {
           </li>
         ))}
         <button
-          className="w-full text-center mx-auto py-2 hover:bg-gray-100"
+          className="w-full text-center mx-auto py-2 hover:bg-gray-800 active:bg-gray-800 hover:text-white"
           onClick={() => setShowBottomTabNavDrawer(!showBottomTabNavDrawer)}
         >
           <MdMenu className="mx-auto text-2xl" />
