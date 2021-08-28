@@ -28,8 +28,8 @@ export const BottomTabNav = () => {
   const router = useRouter();
 
   return (
-    <div className="fixed w-screen bottom-0 shadow-2xl border-t-2 border-gray-800">
-      <ul className="flex flex-row justify-evenly items-center">
+    <div className="fixed bottom-0 w-screen border-t-2 border-gray-800 shadow-2xl">
+      <ul className="flex flex-row items-center justify-evenly">
         {links.map((link) => (
           <li
             className={
@@ -52,9 +52,11 @@ export const BottomTabNav = () => {
           className={
             showBottomTabNavDraw
               ? "w-full text-center mx-auto py-2 bg-gray-800 text-white"
-              : "w-full text-center mx-auto py-2 hover:bg-gray-800 active:bg-gray-800 hover:text-white"
+              : "w-full text-center mx-auto py-2 hover:bg-gray-800 hover:text-white focus:bg-white focus:text-gray-800"
           }
-          onClick={() => setShowBottomTabNavDraw(!showBottomTabNavDraw)}
+          onClick={(e) => {
+            setShowBottomTabNavDraw(!showBottomTabNavDraw);
+          }}
         >
           <MdMenu className="mx-auto text-2xl" />
           <span className="text-xs">More</span>
@@ -69,12 +71,12 @@ export const BottomTabNav = () => {
             : "h-0 transition-all duration-500 bg-gray-800 text-white"
         }
       >
-        <div className="container mx-auto p-4 text-center">
+        <div className="container p-4 mx-auto text-center">
           <h6>
             Thank you for visiting my site, I'd love to to expand my network so
             why not connect <span role="img">😊</span>
           </h6>
-          <ul className="flex flex-row justify-around items-center py-4">
+          <ul className="flex flex-row items-center justify-around py-4">
             <li>
               <a href="https://github.com/damiensedgwick/" target="_blank">
                 <AiFillGithub className="text-4xl" />
