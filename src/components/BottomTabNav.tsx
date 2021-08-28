@@ -6,6 +6,7 @@ import {
   AiFillLinkedin,
   AiFillTwitterCircle,
   AiFillGithub,
+  AiFillHeart,
 } from "react-icons/ai";
 
 const links = [
@@ -28,7 +29,7 @@ export const BottomTabNav = () => {
   const router = useRouter();
 
   return (
-    <div className="fixed bottom-0 w-screen border-t-2 border-gray-800 shadow-2xl">
+    <div className="fixed bottom-0 w-screen bg-white border-t-2 border-gray-800 shadow-2xl">
       <ul className="flex flex-row items-center justify-evenly">
         {links.map((link) => (
           <li
@@ -74,13 +75,18 @@ export const BottomTabNav = () => {
       >
         <div className="container p-4 mx-auto text-center">
           <h6>
-            Thank you for visiting my site, I'd love to to expand my network so
-            why not connect <span role="img">😊</span>
+            Thanks for visiting my site, I'd love to to expand my network so why
+            not connect <span role="img">😊</span>
           </h6>
           <ul className="flex flex-row items-center justify-around py-4">
             <li>
               <a href="https://github.com/damiensedgwick/" target="_blank">
                 <AiFillGithub className="text-4xl" />
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/damiensedgwick/" target="_blank">
+                <AiFillHeart className="text-4xl" />
               </a>
             </li>
             <li>

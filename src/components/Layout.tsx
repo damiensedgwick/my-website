@@ -1,5 +1,7 @@
 import Head from "next/head";
 import React from "react";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
 import { BottomTabNav } from "./BottomTabNav";
 
 interface LayoutProps {
@@ -21,11 +23,21 @@ export const Layout: React.FC<LayoutProps> = ({
         <link rel="stylesheet" href="/favicon.ico" />
       </Head>
 
+      <header className="hidden shadow-2xl md:block">
+        <Header />
+      </header>
+
       <main>{children}</main>
 
-      <div className="md:hidden">
-        <BottomTabNav />
-      </div>
+      <footer>
+        <div className="flex-row justify-center hidden text-white bg-gray-800 md:flex">
+          <Footer />
+        </div>
+
+        <div className="block md:hidden">
+          <BottomTabNav />
+        </div>
+      </footer>
     </>
   );
 };
