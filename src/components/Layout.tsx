@@ -1,33 +1,31 @@
-import React from "react";
 import Head from "next/head";
+import React from "react";
+import { BottomTabNav } from "./BottomTabNav";
 
-import { Navigation } from "./Navigation";
-import { Footer } from "../components/Footer";
-
-interface Props {
-  pageTitle: string;
-  pageDescription: string;
+interface LayoutProps {
+  metaTitle: string;
+  metaDescription: string;
   children: React.ReactNode;
 }
 
-export const Layout = ({ pageTitle, pageDescription, children }: Props) => {
+export const Layout: React.FC<LayoutProps> = ({
+  metaTitle,
+  metaDescription,
+  children,
+}) => {
   return (
     <>
-      {/* Document head */}
       <Head>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <link rel="icon" href="/favicon.ico" />
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
+        <link rel="stylesheet" href="/favicon.ico" />
       </Head>
 
-      {/* Global navigation */}
-      <Navigation />
-
-      {/* Page content */}
       <main>{children}</main>
 
-      {/* Global footer */}
-      <Footer />
+      <div className="md:hidden">
+        <BottomTabNav />
+      </div>
     </>
   );
 };
