@@ -8,6 +8,7 @@ import {
   AiFillGithub,
   AiFillHeart,
 } from "react-icons/ai";
+import { useEffect } from "react";
 
 const links = [
   { title: "Home", path: "/", icon: <MdHome className="mx-auto text-2xl" /> },
@@ -27,6 +28,16 @@ export const BottomTabNav = () => {
   const [showBottomTabNavDraw, setShowBottomTabNavDraw] = useState(false);
 
   const router = useRouter();
+
+  useEffect(() => {
+    const isScrolling = () => {
+      setShowBottomTabNavDraw(false);
+    };
+
+    window.addEventListener("scroll", isScrolling);
+
+    return () => window.removeEventListener("scroll", isScrolling);
+  }, [showBottomTabNavDraw]);
 
   return (
     <div className="fixed bottom-0 w-screen bg-white border-t-2 border-gray-800 shadow-2xl">
