@@ -23,7 +23,7 @@ const links = [
 ];
 
 export const BottomTabNav = () => {
-  const [showBottomTabNavDrawer, setShowBottomTabNavDrawer] = useState(false);
+  const [showBottomTabNavDraw, setShowBottomTabNavDraw] = useState(false);
 
   const router = useRouter();
 
@@ -34,7 +34,9 @@ export const BottomTabNav = () => {
           <li
             className={
               router.pathname === link.path
-                ? "w-full text-center py-2 bg-gray-800 text-white"
+                ? showBottomTabNavDraw
+                  ? "w-full text-center py-2"
+                  : "w-full text-center py-2 bg-gray-800 text-white"
                 : "w-full text-center py-2 hover:bg-gray-800 hover:text-white"
             }
           >
@@ -47,8 +49,12 @@ export const BottomTabNav = () => {
           </li>
         ))}
         <button
-          className="w-full text-center mx-auto py-2 hover:bg-gray-800 active:bg-gray-800 hover:text-white"
-          onClick={() => setShowBottomTabNavDrawer(!showBottomTabNavDrawer)}
+          className={
+            showBottomTabNavDraw
+              ? "w-full text-center mx-auto py-2 bg-gray-800 text-white"
+              : "w-full text-center mx-auto py-2 hover:bg-gray-800 active:bg-gray-800 hover:text-white"
+          }
+          onClick={() => setShowBottomTabNavDraw(!showBottomTabNavDraw)}
         >
           <MdMenu className="mx-auto text-2xl" />
           <span className="text-xs">More</span>
@@ -56,8 +62,9 @@ export const BottomTabNav = () => {
       </ul>
 
       <div
+        id="bottom-tab-nav-draw"
         className={
-          showBottomTabNavDrawer
+          showBottomTabNavDraw
             ? "h-44 transition-all duration-500 bg-gray-800 text-white"
             : "h-0 transition-all duration-500 bg-gray-800 text-white"
         }
