@@ -38,11 +38,21 @@ const Home: NextPage = () => {
             <h2 className="mb-2 text-3xl">About</h2>
             <hr />
             <p className="mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim est
-              necessitatibus expedita ipsum amet id fuga optio accusantium
-              eligendi vitae voluptates vel saepe ea, adipisci unde fugit! Non,
-              ullam incidunt. Iusto quisquam pariatur odit aliquid assumenda
-              numquam ullam iure consequatur.
+              Compared to a lot of developers, I got into programming fairly
+              late in life, I was 28. By the time I started learning how to code
+              I had already been a car valeter, agency labourer, telesales
+              agent, scaffolder, shop fitter and recycled waste operative.
+            </p>
+            <br />
+            <p>
+              This meant I had a lot of catching up to do and in my fast
+              approaching 30 mind, not a lot of time to do it.
+            </p>
+            <br />
+            <p>
+              <a className="border-b-2 border-white" href="/about">
+                Read more about my journey here!
+              </a>
             </p>
           </div>
         </div>
@@ -54,12 +64,14 @@ const Home: NextPage = () => {
             <h2 className="mb-2 text-3xl">Experience</h2>
             <hr />
             <p className="mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim est
-              necessitatibus expedita ipsum amet id fuga optio accusantium
-              eligendi vitae voluptates vel saepe ea, adipisci unde fugit! Non,
-              ullam incidunt. Iusto quisquam pariatur odit aliquid assumenda
-              numquam ullam iure consequatur.
+              I consider myself quite lucky as I have had the privedge of
+              working on some really cool projects and experienced working with
+              some really big brands, I've worked with companies that operate on
+              a global scale and I've worked with companies that specialise in
+              niche areas, below is some of those experiences:
             </p>
+            <br />
+            <p className="text-center">... coming soon</p>
           </div>
         </div>
       </div>
