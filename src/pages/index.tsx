@@ -22,7 +22,7 @@ const Home: NextPage = () => {
           <hr className="mb-2" />
         </div>
         <div className="col-span-4 row-start-2 md:col-start-2">
-          <p className="mb-8 text-lg">
+          <p className="mb-8">
             "Damien is one of the most adaptable developers I've had the
             pleasure to work with. He's seems to be on a constant search for
             knowledge which is one of the best traits a developer can have! On
