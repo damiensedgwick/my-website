@@ -58,8 +58,8 @@ export const BottomTabNav = () => {
       <div
         className={
           showBottomTabNavDrawer
-            ? "h-44 transition-all duration-500"
-            : "h-0 transition-all duration-500"
+            ? "h-44 transition-all duration-500 bg-gray-800 text-white"
+            : "h-0 transition-all duration-500 bg-gray-800 text-white"
         }
       >
         <div className="container mx-auto p-4 text-center">
