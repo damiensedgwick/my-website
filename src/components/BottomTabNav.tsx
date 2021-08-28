@@ -38,8 +38,8 @@ export const BottomTabNav = () => {
               router.pathname === link.path
                 ? showBottomTabNavDraw
                   ? "w-full text-center py-2"
-                  : "w-full text-center py-2 bg-gray-800 text-white"
-                : "w-full text-center py-2 hover:bg-gray-800 hover:text-white"
+                  : "w-full text-center py-2 bg-gray-200"
+                : "w-full text-center py-2 hover:bg-gray-200"
             }
           >
             <Link href={link.path}>
@@ -53,8 +53,8 @@ export const BottomTabNav = () => {
         <button
           className={
             showBottomTabNavDraw
-              ? "w-full text-center mx-auto py-2 bg-gray-800 text-white"
-              : "w-full text-center mx-auto py-2 hover:bg-gray-800 hover:text-white focus:bg-white focus:text-gray-800 active:bg-white active:text-gray-800"
+              ? "w-full text-center mx-auto py-2 bg-gray-200"
+              : "w-full text-center mx-auto py-2 hover:bg-gray-200"
           }
           onClick={(e) => {
             setShowBottomTabNavDraw(!showBottomTabNavDraw);

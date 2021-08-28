@@ -48,7 +48,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="shadow-2xl">
+      <div className="pb-20 shadow-2xl md:pb-0">
         <div className="container grid grid-cols-1 grid-rows-1 gap-2 px-6 py-8 mx-auto md:grid-cols-6 md:px-0">
           <div className="col-span-4 md:col-start-2">
             <h2 className="mb-2 text-3xl">Experience</h2>
