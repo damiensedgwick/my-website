@@ -1,8 +1,8 @@
+import { Icon } from "@iconify/react";
 import {
-  AiFillLinkedin,
-  AiFillTwitterCircle,
-  AiFillGithub,
-  AiFillHeart,
+  AiOutlineGithub,
+  AiOutlineLinkedin,
+  AiOutlineTwitter,
 } from "react-icons/ai";
 
 export const Footer = () => {
@@ -12,25 +12,25 @@ export const Footer = () => {
         Thanks for visiting my site, I'd love to to expand my network so why not
         connect <span role="img">😊</span>
       </h6>
-      <ul className="flex flex-row items-center justify-around w-1/2 py-4 mx-auto">
-        <li>
+      <ul className="flex flex-row items-center justify-around py-4 mx-auto">
+        <li className="mx-3">
           <a href="https://github.com/damiensedgwick/" target="_blank">
-            <AiFillGithub className="text-4xl" />
+            <AiOutlineGithub className="text-4xl" />
           </a>
         </li>
-        <li>
+        <li className="mx-3">
           <a href="https://www.polywork.com/dks" target="_blank">
-            <AiFillHeart className="text-4xl" />
+            <Icon className="text-3xl" icon="simple-icons:polywork" />
           </a>
         </li>
-        <li>
+        <li className="mx-3">
           <a href="https://www.linkedin.com/in/damiensedgwick/" target="_blank">
-            <AiFillLinkedin className="text-4xl" />
+            <AiOutlineLinkedin className="text-4xl" />
           </a>
         </li>
-        <li>
+        <li className="mx-3">
           <a href="https://twitter.com/damiensedgwick" target="_blank">
-            <AiFillTwitterCircle className="text-4xl" />
+            <AiOutlineTwitter className="text-4xl" />
           </a>
         </li>
       </ul>

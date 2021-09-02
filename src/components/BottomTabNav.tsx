@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Icon } from "@iconify/react";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { MdHome, MdInfo, MdPermContactCalendar, MdMenu } from "react-icons/md";
@@ -97,7 +98,7 @@ export const BottomTabNav = () => {
             </li>
             <li>
               <a href="https://www.polywork.com/dks" target="_blank">
-                <AiFillHeart className="text-4xl" />
+                <Icon className="text-3xl" icon="simple-icons:polywork" />
               </a>
             </li>
             <li>
