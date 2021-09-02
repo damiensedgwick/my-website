@@ -8,7 +8,7 @@ const Home: NextPage = () => {
       metaTitle="Damien Sedgwick | Frontend Developer"
       metaDescription="Frontend Developer at Yozobi, inquisitive and passionate developer hacking on the world wide web. Skills include JavaScript, TypeScript, React, GraphQL, GoLang."
     >
-      <div className="container grid grid-cols-1 grid-rows-2 gap-2 px-6 pt-8 mx-auto md:grid-cols-6 md:grid-rows-2 md:px-0">
+      <div className="container grid max-w-6xl grid-cols-1 grid-rows-2 gap-2 px-6 pt-8 mx-auto md:grid-cols-6 md:grid-rows-2 md:px-0">
         <div className="col-span-4 md:col-start-2">
           <img
             className="w-40 mx-auto mb-4 rounded-full"
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
       </div>
 
       <div className="text-white bg-gray-800 shadow-2xl">
-        <div className="container grid grid-cols-1 grid-rows-1 gap-2 px-6 py-8 mx-auto md:grid-cols-6 md:px-0">
+        <div className="container grid max-w-6xl grid-cols-1 grid-rows-1 gap-2 px-6 py-8 mx-auto md:grid-cols-6 md:px-0">
           <div className="col-span-4 md:col-start-2">
             <h2 className="mb-2 text-3xl">About</h2>
             <hr />
@@ -59,7 +59,7 @@ const Home: NextPage = () => {
       </div>
 
       <div className="pb-20 shadow-2xl md:pb-0">
-        <div className="container grid grid-cols-1 grid-rows-1 gap-2 px-6 py-8 mx-auto md:grid-cols-6 md:px-0">
+        <div className="container grid max-w-6xl grid-cols-1 grid-rows-1 gap-2 px-6 py-8 mx-auto md:grid-cols-6 md:px-0">
           <div className="col-span-4 md:col-start-2">
             <h2 className="mb-2 text-3xl">Experience</h2>
             <hr />
