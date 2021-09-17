@@ -16,15 +16,27 @@ const Home: NextPage = () => {
         />
       </Head>
       <div className={styles.card}>
-        <div className={styles.cardHeader}>
-          <img
-            className={styles.avatar}
-            src="/avatar.jpeg"
-            alt="Picture of Damien Sedgwick"
-          />
+        <div className={styles.cardInner}>
+          <div className={styles.cardHeader}>
+            <img
+              className={styles.avatar}
+              src="/avatar.jpeg"
+              alt="Picture of Damien Sedgwick"
+            />
+          </div>
+        </div>
+        <div className={styles.intro}>
+          <h1 className={styles.cardTitle}>Damien Sedgwick</h1>
+          <p className={styles.cardSubtitle}>Frontend Developer</p>
+          <p className={styles.cardIntroText}>
+            A frontend developer with strong skills in JavaScript/TypeScript,
+            React, GraphQL and currently learning Golang.
+          </p>
+        </div>
+        <div className={styles.contactSection}>
+          {/* <button className={styles.contactButton}>Contact</button> */}
         </div>
       </div>
-      <h1 className={styles.cardTitle}>Damien Sedgwick</h1>
     </div>
   );
 };
