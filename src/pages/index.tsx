@@ -1,5 +1,11 @@
 import Head from "next/head";
 import type { NextPage } from "next";
+import { Icon } from "@iconify/react";
+import {
+  AiOutlineGithub,
+  AiOutlineLinkedin,
+  AiOutlineTwitter,
+} from "react-icons/ai";
 
 import styles from "../styles/home.module.css";
 
@@ -35,6 +41,44 @@ const Home: NextPage = () => {
         </div>
         <div className={styles.contactSection}>
           {/* <button className={styles.contactButton}>Contact</button> */}
+          <ul className={styles.socialLinks}>
+            <li className={styles.socialLinkItem}>
+              <a
+                className={styles.socialLink}
+                href="https://github.com/damiensedgwick/"
+                target="_blank"
+              >
+                <AiOutlineGithub />
+              </a>
+            </li>
+            <li className={styles.socialLinkItem}>
+              <a
+                className={styles.socialLink}
+                href="https://www.linkedin.com/in/damiensedgwick/"
+                target="_blank"
+              >
+                <AiOutlineLinkedin />
+              </a>
+            </li>
+            <li className={styles.socialLinkItem}>
+              <a
+                className={styles.socialLink}
+                href="https://twitter.com/damiensedgwick"
+                target="_blank"
+              >
+                <AiOutlineTwitter />
+              </a>
+            </li>
+            <li className={styles.socialLinkItem}>
+              <a
+                className={styles.socialLink}
+                href="https://www.polywork.com/dks"
+                target="_blank"
+              >
+                <Icon icon="simple-icons:polywork" />
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
