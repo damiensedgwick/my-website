@@ -36,7 +36,8 @@ const Home: NextPage = () => {
           <p className={styles.cardSubtitle}>Frontend Developer</p>
           <p className={styles.cardIntroText}>
             A frontend developer with strong skills in JavaScript/TypeScript,
-            React, GraphQL and currently learning Golang.
+            React, GraphQL and currently breaking things with Golang in my spare
+            time.
           </p>
         </div>
         <div className={styles.contactSection}>
