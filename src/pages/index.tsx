@@ -26,18 +26,19 @@ const Home: NextPage = () => {
           <div className={styles.cardHeader}>
             <img
               className={styles.avatar}
-              src="/avatar.jpeg"
+              src="/avatar.jpg"
               alt="Picture of Damien Sedgwick"
             />
           </div>
         </div>
         <div className={styles.intro}>
           <h1 className={styles.cardTitle}>Damien Sedgwick</h1>
-          <p className={styles.cardSubtitle}>Frontend Developer</p>
+          {/* <p className={styles.cardSubtitle}>Frontend Developer</p> */}
           <p className={styles.cardIntroText}>
             A frontend developer with strong skills in JavaScript/TypeScript,
-            React, GraphQL and currently breaking things with Golang in my spare
-            time.
+            React, XState and Graphql. I am also passionate about learning new
+            technologies and as such, I am currently studying iOS Development
+            using Swift and SwiftUI.
           </p>
         </div>
         <div className={styles.contactSection}>
