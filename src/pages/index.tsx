@@ -41,6 +41,7 @@ const Home: NextPage = () => {
             using Swift and SwiftUI.
           </p>
         </div>
+        {/* Add in Work cards / project cards? */}
         <div className={styles.contactSection}>
           {/* <button className={styles.contactButton}>Contact</button> */}
           <ul className={styles.socialLinks}>
