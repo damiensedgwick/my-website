@@ -3,11 +3,11 @@
   height: 100vh;
 }
 
-.card {
+.masthead {
   width: 100%;
 }
 
-.cardInner {
+.mastheadContent {
   width: 100%;
   display: grid;
   gap: 0.2rem;
@@ -15,7 +15,7 @@
   grid-template-rows: repeat(3, 100px);
 }
 
-.cardHeader {
+.mastheadBackground {
   background: linear-gradient(#24243e, #7c22ca);
   grid-column-start: span 3;
   grid-row-start: span 2;
@@ -24,7 +24,7 @@
   grid-template-rows: repeat(2, 100px);
 }
 
-.avatar {
+.mastheadAvatar {
   width: 12rem;
   border: 2px solid white;
   border-radius: 50%;
@@ -42,22 +42,13 @@
   margin: 0 auto;
 }
 
-.cardTitle {
+.introTitle {
   font-size: 1.75rem;
   font-weight: 600;
   text-align: center;
 }
 
-.cardSubtitle {
-  font-size: 1.1rem;
-  font-weight: 300;
-  text-align: center;
-  padding-top: 0.8rem;
-  text-transform: uppercase;
-  opacity: 0.75;
-}
-
-.cardIntroText {
+.introText {
   padding: 1rem 0;
   border-bottom: 1px solid #000428;
 }

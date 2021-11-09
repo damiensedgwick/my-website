@@ -13,37 +13,38 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title></title>
-        <meta name="description" content="" />
+        <title>Damien Sedgwick | Software Engineer</title>
+        <meta
+          name="description"
+          content="Damien Sedgwick is a software engineer currently working at Yozobi."
+        />
         <link rel="stylesheet" href="/favicon.ico" />
         <link
           href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap"
           rel="stylesheet"
         />
       </Head>
-      <div className={styles.card}>
-        <div className={styles.cardInner}>
-          <div className={styles.cardHeader}>
+      <div className={styles.masthead}>
+        <div className={styles.mastheadContent}>
+          <div className={styles.mastheadBackground}>
             <img
-              className={styles.avatar}
+              className={styles.mastheadAvatar}
               src="/avatar.jpg"
               alt="Picture of Damien Sedgwick"
             />
           </div>
         </div>
         <div className={styles.intro}>
-          <h1 className={styles.cardTitle}>Damien Sedgwick</h1>
-          {/* <p className={styles.cardSubtitle}>Frontend Developer</p> */}
-          <p className={styles.cardIntroText}>
-            A frontend developer with strong skills in JavaScript/TypeScript,
-            React, XState and Graphql. I am also passionate about learning new
-            technologies and as such, I am currently studying iOS Development
-            using Swift and SwiftUI.
+          <h1 className={styles.introTitle}>Damien Sedgwick</h1>
+          <p className={styles.introText}>
+            A software engineer with strong skills in JavaScript/TypeScript,
+            React, XState, Hasura and Graphql. I am also passionate about
+            learning new technologies and contributing to open source software
+            in my spare time.
           </p>
         </div>
         {/* Add in Work cards / project cards? */}
         <div className={styles.contactSection}>
-          {/* <button className={styles.contactButton}>Contact</button> */}
           <ul className={styles.socialLinks}>
             <li className={styles.socialLinkItem}>
               <a
