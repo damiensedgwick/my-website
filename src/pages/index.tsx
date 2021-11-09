@@ -44,6 +44,7 @@ const Home: NextPage = () => {
           </p>
         </div>
         {/* Add in Work cards / project cards? */}
+        <div className={styles.projectsSection}></div>
         <div className={styles.contactSection}>
           <ul className={styles.socialLinks}>
             <li className={styles.socialLinkItem}>
