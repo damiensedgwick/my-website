@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Home: NextPage = () => {
   return (
-    <div className={`px-3 md:px-0 w-full`}>
+    <div className={`px-3 md:px-0 w-full font-jetbrains`}>
       <Head>
         <title>Damien Sedgwick | Software Engineer</title>
         <meta
@@ -26,8 +26,8 @@ const Home: NextPage = () => {
             height={125}
             alt={`Damien Sedgwick Avatar`}
           />
-          <h1>Damien Sedgwick</h1>
-          <p>
+          <h1 className={`text-2xl`}>Damien Sedgwick</h1>
+          <p className={`max-w-prose`}>
             A software engineer with strong skills in JavaScript/TypeScript,
             React, XState, Hasura and Graphql. I am also passionate about
             learning new technologies and contributing to open source software
