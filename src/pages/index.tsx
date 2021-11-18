@@ -21,7 +21,7 @@ const Home: NextPage = () => {
 
       <main>
         <div className={`w-full flex flex-row justify-end items-center p-3`}>
-          <button>switch theme</button>
+          {/*<button onClick={() => alert("TODO")}>switch theme</button>*/}
         </div>
         <div className={`flex flex-col items-center space-y-8 pt-8`}>
           <img
