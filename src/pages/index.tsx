@@ -1,3 +1,4 @@
+import React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 
@@ -19,7 +20,10 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <div className={`flex flex-col items-center space-y-4 pt-8`}>
+        <div className={`w-full flex flex-row justify-end items-center p-3`}>
+          <button>switch theme</button>
+        </div>
+        <div className={`flex flex-col items-center space-y-8 pt-8`}>
           <img
             className={`rounded-full border-4 border-light shadow-2xl`}
             src={`/avatar.jpg`}
@@ -34,6 +38,20 @@ const Home: NextPage = () => {
             learning new technologies and contributing to open source software
             in my spare time.
           </p>
+          <ul className={`flex flex-row space-x-5`}>
+            <li>
+              <a href="#">GitHub</a>
+            </li>
+            <li>
+              <a href="#">Polywork</a>
+            </li>
+            <li>
+              <a href="#">LinkedIn</a>
+            </li>
+            <li>
+              <a href="#">Twitter</a>
+            </li>
+          </ul>
         </div>
       </main>
     </div>
