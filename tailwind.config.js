@@ -3,8 +3,16 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "media", // or 'media' or 'class'
   theme: {
+    textColor: {
+      dark: "#353b48",
+      light: "#f5f6fa",
+    },
+    colors: {
+      dark: "#353b48",
+      light: "#f5f6fa",
+    },
     fontFamily: {
       jetbrains: '"JetBrains Mono"',
     },

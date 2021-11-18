@@ -1,10 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 
 const Home: NextPage = () => {
   return (
-    <div className={`px-3 md:px-0 w-full font-jetbrains`}>
+    <div
+      className={`px-3 md:px-0 w-full min-h-screen font-jetbrains text-dark dark:text-light bg-light dark:bg-dark`}
+    >
       <Head>
         <title>Damien Sedgwick | Software Engineer</title>
         <meta
@@ -19,8 +20,8 @@ const Home: NextPage = () => {
 
       <main>
         <div className={`flex flex-col items-center space-y-4 pt-8`}>
-          <Image
-            className={`rounded-full`}
+          <img
+            className={`rounded-full border-4 border-light shadow-2xl`}
             src={`/avatar.jpg`}
             width={125}
             height={125}
