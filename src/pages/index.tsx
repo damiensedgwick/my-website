@@ -55,7 +55,7 @@ const Home: NextPage = () => {
             <li>
               <a
                 className={`border-b`}
-                href="https://www.linkedin.com/damiensedgwick"
+                href="https://www.linkedin.com/in/damiensedgwick/"
               >
                 LinkedIn
               </a>
