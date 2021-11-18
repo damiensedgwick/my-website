@@ -40,16 +40,33 @@ const Home: NextPage = () => {
           </p>
           <ul className={`flex flex-row space-x-5`}>
             <li>
-              <a href="#">GitHub</a>
+              <a
+                className={`border-b`}
+                href="https://www.github.com/damiensedgwick"
+              >
+                GitHub
+              </a>
             </li>
             <li>
-              <a href="#">Polywork</a>
+              <a className={`border-b`} href="https://www.polywork.com/dks">
+                Polywork
+              </a>
             </li>
             <li>
-              <a href="#">LinkedIn</a>
+              <a
+                className={`border-b`}
+                href="https://www.linkedin.com/damiensedgwick"
+              >
+                LinkedIn
+              </a>
             </li>
             <li>
-              <a href="#">Twitter</a>
+              <a
+                className={`border-b`}
+                href="https://www.twitter.com/damiensedgwick"
+              >
+                Twitter
+              </a>
             </li>
           </ul>
         </div>
