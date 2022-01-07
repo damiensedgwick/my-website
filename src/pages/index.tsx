@@ -26,7 +26,7 @@ const Home: NextPage = () => {
         <div className={`flex flex-col items-center space-y-8 pt-8`}>
           <img
             className={`rounded-full border-4 border-light shadow-2xl`}
-            src={`/avatar.jpg`}
+            src={`/pp.jpg`}
             width={125}
             height={125}
             alt={`Damien Sedgwick Avatar`}
