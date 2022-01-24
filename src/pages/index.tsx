@@ -20,10 +20,9 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <div className={`w-full flex flex-row justify-end items-center p-3`}>
-          {/*<button onClick={() => alert("TODO")}>switch theme</button>*/}
-        </div>
-        <div className={`flex flex-col items-center space-y-8 pt-8`}>
+        <div
+          className={`flex flex-col items-center space-y-8 h-screen justify-center items-center`}
+        >
           <img
             className={`rounded-full border-4 border-light shadow-2xl`}
             src={`/pp.jpg`}
