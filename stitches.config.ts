@@ -19,12 +19,15 @@ export const {
   config,
 } = createStitches({
   media: {
-    sm: '640px',
-    md: '768px',
-    lg: '1024px',
-    xl: '1280px',
+    sm: '(min-width: 640px)',
+    md: '(min-width: 768px)',
+    lg: '(min-width: 1024px)',
+    xl: '(min-width: 1440px)',
   },
   theme: {
+    colors: {
+      slate: '#1E293B',
+    },
     fonts: {
       poppins: '"Poppins", sans-serif',
     },
