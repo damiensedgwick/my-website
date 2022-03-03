@@ -19,10 +19,10 @@ export const {
   config,
 } = createStitches({
   media: {
-    sm: '(min-width: 520px)',
-    md: '(min-width: 900px)',
-    lg: '(min-width: 1200px)',
-    xl: '(min-width: 1800px)',
+    sm: '640px',
+    md: '768px',
+    lg: '1024px',
+    xl: '1280px',
   },
   theme: {
     fonts: {
