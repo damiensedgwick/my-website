@@ -10,6 +10,9 @@ export const globalStyles = globalCss({
   'html, body': {
     fontSize: '1.2rem',
     fontFamily: '$roboto',
+
+    color: '$darkText',
+    background: '$lightText',
   },
 });
 
@@ -27,8 +30,11 @@ export const { styled, getCssText, theme } = createStitches({
       slate800: '#1E293B',
       slate900: '#0F172A',
 
-      primaryColor: '$slate100',
-      primaryBackground: '$slate900',
+      lightText: '$slate100',
+      lightBackground: '$slate100',
+
+      darkText: '$slate900',
+      darkBackground: '$slate900',
     },
     fonts: {
       roboto: 'roboto',

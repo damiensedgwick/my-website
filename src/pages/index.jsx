@@ -2,10 +2,12 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { styled, theme } from '../../stitches.config';
 
+import { IoLogoTwitter, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5';
+
 const Homepage = styled('div', {
   width: '100vw',
   height: '100vh',
-  background: theme.colors.slate100,
+  background: theme.colors.lightBackground,
 });
 
 const Grid = styled('div', {
@@ -28,7 +30,7 @@ const Circle = styled('div', {
   width: '450px',
   height: '450px',
   borderRadius: '100%',
-  background: theme.colors.primaryBackground,
+  background: theme.colors.darkBackground,
 });
 
 const ContentWrapper = styled('div', {
@@ -42,29 +44,31 @@ const ContentWrapper = styled('div', {
 });
 
 const Name = styled('p', {
-  fontSize: '1rem',
+  fontSize: '1.2rem',
+  textTransform: 'uppercase',
 });
 
 const Role = styled('h1', {
-  fontSize: '1.5rem',
+  fontSize: '1.8rem',
+  margin: '0.2rem 0',
+  color: theme.colors.lightText,
+  '-webkit-text-stroke-width': '1px',
+  '-webkit-text-stroke-color': theme.colors.darkText,
+  letterSpacing: '0.05rem',
 });
 
 const SocialLinks = styled('ul', {
   display: 'flex',
 
   li: {
-    margin: '0.25rem',
+    margin: '0.35rem',
     listStyle: 'none',
-  },
-});
 
-const NavigationWrapper = styled('div', {
-  width: '450px',
-  height: '450px',
-  background: theme.colors.primaryBackground,
-  border: `1px solid inherit`,
-  borderRadius: '9999px',
-  gridRow: '3 / span 2',
+    a: {
+      fontSize: '1.5rem',
+      color: theme.colors.slate800,
+    },
+  },
 });
 
 export default function Home() {
@@ -80,13 +84,19 @@ export default function Home() {
           <Role>Frontend Developer</Role>
           <SocialLinks>
             <li>
-              <a href='https://github.com/damiensedgwick'>Github</a>
+              <a href='https://linkedin.com/in/damiensedgwick/'>
+                <IoLogoLinkedin />
+              </a>
             </li>
             <li>
-              <a href='https://linkedin.com/in/damiensedgwick/'>LinkedIn</a>
+              <a href='https://github.com/damiensedgwick/'>
+                <IoLogoGithub />
+              </a>
             </li>
             <li>
-              <a href='https://twitter.com/damiensedgwick'>Twitter</a>
+              <a href='https://twitter.com/damiensedgwick'>
+                <IoLogoTwitter />
+              </a>
             </li>
           </SocialLinks>
         </ContentWrapper>
