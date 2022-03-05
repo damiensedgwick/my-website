@@ -1,7 +1,12 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { styled, theme } from '../../stitches.config';
-import { IoLogoTwitter, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5';
+import {
+  IoLogoTwitter,
+  IoLogoGithub,
+  IoLogoLinkedin,
+  IoArrowForwardSharp,
+} from 'react-icons/io5';
 
 const Homepage = styled('div', {
   width: '100vw',
