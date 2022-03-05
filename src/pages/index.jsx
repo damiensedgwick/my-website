@@ -19,20 +19,6 @@ const Grid = styled('div', {
   overflowX: 'hidden',
 });
 
-const CircleContainer = styled('div', {
-  overflowX: 'hidden',
-  gridRow: '3 / span 4',
-});
-
-const Circle = styled('div', {
-  width: '90vw',
-  height: '90vw',
-  margin: '0 auto',
-  borderRadius: '100%',
-  background: theme.colors.darkBackground,
-  filter: theme.shadows.dropShadow,
-});
-
 const ContentWrapper = styled('div', {
   maxWidth: '100vw',
   gridRow: '1 / span 2',
@@ -46,7 +32,6 @@ const ContentWrapper = styled('div', {
 const Name = styled('p', {
   fontSize: '1.2rem',
   textTransform: 'uppercase',
-  filter: theme.shadows.dropShadow,
 });
 
 const Role = styled('h1', {
@@ -103,10 +88,6 @@ export default function Home() {
             </li>
           </SocialLinks>
         </ContentWrapper>
-
-        <CircleContainer>
-          <Circle />
-        </CircleContainer>
 
         {/*<NavigationWrapper>*/}
         {/*  <ul>*/}

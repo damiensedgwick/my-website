@@ -51,7 +51,6 @@ export const { styled, getCssText, theme } = createStitches({
     },
   },
   media: {
-    xs: '(min-width: 390px)',
     sm: '(min-width: 640px)',
     md: '(min-width: 768px)',
     lg: '(min-width: 1024px)',
