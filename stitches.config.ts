@@ -4,10 +4,11 @@ export const globalStyles = globalCss({
   '*, *::before, *::after': {
     padding: '0',
     margin: '0',
-    boxSizing: 'border-box',
+    // boxSizing: 'border-box',
   },
 
   'html, body': {
+    fontSize: '1.2rem',
     fontFamily: '$roboto',
   },
 });
@@ -25,6 +26,9 @@ export const { styled, getCssText, theme } = createStitches({
       slate700: '#334155',
       slate800: '#1E293B',
       slate900: '#0F172A',
+
+      primaryColor: '$slate100',
+      primaryBackground: '$slate900',
     },
     fonts: {
       roboto: 'roboto',
