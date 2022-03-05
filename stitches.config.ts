@@ -1,10 +1,39 @@
-import { createStitches } from '@stitches/react';
+import { createStitches, globalCss } from '@stitches/react';
 
-export const { getCssText, styled } = createStitches({
+export const globalStyles = globalCss({
+  '*, *::before, *::after': {
+    padding: '0',
+    margin: '0',
+    boxSizing: 'border-box',
+  },
+
+  'html, body': {
+    fontFamily: '$roboto',
+  },
+});
+
+export const { styled, getCssText, theme } = createStitches({
   theme: {
     colors: {
-      gray400: 'gainsboro',
-      gray500: 'lightgray',
+      slate50: '#F8FAFC',
+      slate100: '#F1F5F9',
+      slate200: '#E2E8F0',
+      slate300: '#CBD5E1',
+      slate400: '#94A3B8',
+      slate500: '#64748B',
+      slate600: '#475569',
+      slate700: '#334155',
+      slate800: '#1E293B',
+      slate900: '#0F172A',
+    },
+    fonts: {
+      roboto: 'roboto',
+    },
+    fontWeights: {
+      1: '300',
+      2: '400',
+      3: '500',
+      5: '700',
     },
   },
   media: {
