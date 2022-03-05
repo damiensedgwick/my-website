@@ -9,13 +9,26 @@ const Homepage = styled('div', {
 });
 
 const Grid = styled('div', {
-  width: '100%',
-  height: '100%',
+  width: '100vw',
+  height: '100vh',
   display: 'grid',
-  gridTemplateRows: 'repeat(5, 1fr)',
+  gridTemplateRows: 'repeat(6, 1fr)',
   gridTemplateColumns: '1fr',
   gridGap: '0.2rem',
   overflowX: 'hidden',
+});
+
+const CircleContainer = styled('div', {
+  margin: '0 -38px',
+  overflowX: 'hidden',
+  gridRow: '3 / span 4',
+});
+
+const Circle = styled('div', {
+  width: '450px',
+  height: '450px',
+  borderRadius: '100%',
+  background: theme.colors.primaryBackground,
 });
 
 const ContentWrapper = styled('div', {
@@ -56,52 +69,56 @@ const NavigationWrapper = styled('div', {
 
 export default function Home() {
   return (
-    <Homepage>
+    <Homepage id={'homepage'}>
       <Head>
         <title>Use Stitches with Next.js</title>
       </Head>
 
-      <Grid>
-        <ContentWrapper>
-          <Name>Damien Sedgwick</Name>
-          <Role>Frontend Developer</Role>
-          <SocialLinks>
-            <li>
-              <a href='https://github.com/damiensedgwick'>Github</a>
-            </li>
-            <li>
-              <a href='https://linkedin.com/in/damiensedgwick/'>LinkedIn</a>
-            </li>
-            <li>
-              <a href='https://twitter.com/damiensedgwick'>Twitter</a>
-            </li>
-          </SocialLinks>
-        </ContentWrapper>
+      <Grid id={'grid'}>
+        {/*<ContentWrapper>*/}
+        {/*  <Name>Damien Sedgwick</Name>*/}
+        {/*  <Role>Frontend Developer</Role>*/}
+        {/*  <SocialLinks>*/}
+        {/*    <li>*/}
+        {/*      <a href='https://github.com/damiensedgwick'>Github</a>*/}
+        {/*    </li>*/}
+        {/*    <li>*/}
+        {/*      <a href='https://linkedin.com/in/damiensedgwick/'>LinkedIn</a>*/}
+        {/*    </li>*/}
+        {/*    <li>*/}
+        {/*      <a href='https://twitter.com/damiensedgwick'>Twitter</a>*/}
+        {/*    </li>*/}
+        {/*  </SocialLinks>*/}
+        {/*</ContentWrapper>*/}
 
-        <NavigationWrapper>
-          <ul>
-            <li>
-              <Link href='#'>
-                <a>About</a>
-              </Link>
-            </li>
-            <li>
-              <Link href='#'>
-                <a>Work</a>
-              </Link>
-            </li>
-            <li>
-              <Link href='#'>
-                <a>OSS</a>
-              </Link>
-            </li>
-            <li>
-              <Link href='#'>
-                <a>Blog</a>
-              </Link>
-            </li>
-          </ul>
-        </NavigationWrapper>
+        <CircleContainer>
+          <Circle />
+        </CircleContainer>
+
+        {/*<NavigationWrapper>*/}
+        {/*  <ul>*/}
+        {/*    <li>*/}
+        {/*      <Link href='#'>*/}
+        {/*        <a>About</a>*/}
+        {/*      </Link>*/}
+        {/*    </li>*/}
+        {/*    <li>*/}
+        {/*      <Link href='#'>*/}
+        {/*        <a>Work</a>*/}
+        {/*      </Link>*/}
+        {/*    </li>*/}
+        {/*    <li>*/}
+        {/*      <Link href='#'>*/}
+        {/*        <a>OSS</a>*/}
+        {/*      </Link>*/}
+        {/*    </li>*/}
+        {/*    <li>*/}
+        {/*      <Link href='#'>*/}
+        {/*        <a>Blog</a>*/}
+        {/*      </Link>*/}
+        {/*    </li>*/}
+        {/*  </ul>*/}
+        {/*</NavigationWrapper>*/}
       </Grid>
     </Homepage>
   );
