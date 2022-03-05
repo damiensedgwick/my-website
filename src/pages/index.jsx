@@ -13,10 +13,13 @@ const Grid = styled('div', {
   height: '100%',
   display: 'grid',
   gridTemplateRows: 'repeat(5, 1fr)',
+  gridTemplateColumns: '1fr',
   gridGap: '0.2rem',
+  overflowX: 'hidden',
 });
 
 const ContentWrapper = styled('div', {
+  maxWidth: '100vw',
   gridRow: '1 / span 2',
   display: 'flex',
   flexDirection: 'column',
@@ -25,19 +28,30 @@ const ContentWrapper = styled('div', {
   textAlign: 'center',
 });
 
-const Name = styled('p', {});
+const Name = styled('p', {
+  fontSize: '1rem',
+});
 
-const Role = styled('h1', {});
+const Role = styled('h1', {
+  fontSize: '1.5rem',
+});
 
-const SocialLinks = styled('ul', {});
+const SocialLinks = styled('ul', {
+  display: 'flex',
+
+  li: {
+    margin: '0.25rem',
+    listStyle: 'none',
+  },
+});
 
 const NavigationWrapper = styled('div', {
-  width: '500px',
-  height: '500px',
+  width: '450px',
+  height: '450px',
   background: theme.colors.primaryBackground,
   border: `1px solid inherit`,
   borderRadius: '9999px',
-  gridRow: '4 / span 2',
+  gridRow: '3 / span 2',
 });
 
 export default function Home() {
