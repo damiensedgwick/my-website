@@ -40,31 +40,6 @@ const NavigationWrapper = styled('div', {
   gridRow: '4 / span 2',
 });
 
-// const Text = styled('p', {
-//   color: theme.colors.primaryColor,
-//   background: theme.colors.primaryBackground,
-//
-//   padding: '1rem',
-//   margin: '1rem 0',
-//
-//   variants: {
-//     weight: {
-//       300: {
-//         fontWeight: '300',
-//       },
-//       400: {
-//         fontWeight: '400',
-//       },
-//       500: {
-//         fontWeight: '500',
-//       },
-//       700: {
-//         fontWeight: '700',
-//       },
-//     },
-//   },
-// });
-
 export default function Home() {
   return (
     <Homepage>
@@ -72,10 +47,6 @@ export default function Home() {
         <title>Use Stitches with Next.js</title>
       </Head>
 
-      {/*<Text weight={'300'}>Hello...</Text>*/}
-      {/*<Text weight={'400'}>Hello...</Text>*/}
-      {/*<Text weight={'500'}>Hello...</Text>*/}
-      {/*<Text weight={'700'}>Hello...</Text>*/}
       <Grid>
         <ContentWrapper>
           <Name>Damien Sedgwick</Name>
