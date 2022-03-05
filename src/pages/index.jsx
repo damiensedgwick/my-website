@@ -47,17 +47,20 @@ export default function Home() {
         <Subtitle>Frontend Developer</Subtitle>
         <SocialLinks>
           <li>
-            <a href='https://linkedin.com/in/damiensedgwick/'>
+            <a
+              href='https://linkedin.com/in/damiensedgwick/'
+              title={'LinkedIn'}
+            >
               <IoLogoLinkedin />
             </a>
           </li>
           <li>
-            <a href='https://github.com/damiensedgwick/'>
+            <a href='https://github.com/damiensedgwick/' title={'Github'}>
               <IoLogoGithub />
             </a>
           </li>
           <li>
-            <a href='https://twitter.com/damiensedgwick'>
+            <a href='https://twitter.com/damiensedgwick' title={'Twitter'}>
               <IoLogoTwitter />
             </a>
           </li>
