@@ -1,12 +1,9 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import { styled, theme } from '../../stitches.config';
-import {
-  IoLogoTwitter,
-  IoLogoGithub,
-  IoLogoLinkedin,
-  IoArrowForwardSharp,
-} from 'react-icons/io5';
+import { SocialLinks } from '../components/SocialLinks';
+import { Title } from '../components/Title';
+import { Subtitle } from '../components/Subtitle';
+import { IoLogoGithub, IoLogoLinkedin, IoLogoTwitter } from 'react-icons/io5';
 
 const Homepage = styled('div', {
   width: '100vw',
@@ -38,58 +35,16 @@ const ContentWrapper = styled('div', {
   },
 });
 
-const Name = styled('p', {
-  fontSize: '1.2rem',
-  textTransform: 'uppercase',
-
-  '@lg': {
-    fontSize: '1.8rem',
-  },
-});
-
-const Role = styled('h1', {
-  fontSize: '1.8rem',
-  margin: '0.3rem 0',
-  color: theme.colors.lightText,
-  '-webkit-text-stroke-width': '1.25px',
-  '-webkit-text-stroke-color': theme.colors.darkText,
-  letterSpacing: '0.05rem',
-  filter: theme.shadows.dropShadow,
-
-  '@lg': {
-    fontSize: '2.8rem',
-  },
-});
-
-const SocialLinks = styled('ul', {
-  display: 'flex',
-
-  li: {
-    listStyle: 'none',
-    margin: '0 0.5rem 0 0.5rem',
-
-    '@lg': {
-      margin: '0 0.75rem 0 0',
-    },
-
-    a: {
-      fontSize: '1.5rem',
-      color: theme.colors.slate800,
-      filter: theme.shadows.dropShadow,
-    },
-  },
-});
-
 export default function Home() {
   return (
     <Homepage>
       <Head>
-        <title>Use Stitches with Next.js</title>
+        <title>Damien Sedgwick | Frontend Developer</title>
       </Head>
 
       <ContentWrapper>
-        <Name>Damien Sedgwick</Name>
-        <Role>Frontend Developer</Role>
+        <Title>Damien Sedgwick</Title>
+        <Subtitle>Frontend Developer</Subtitle>
         <SocialLinks>
           <li>
             <a href='https://linkedin.com/in/damiensedgwick/'>
