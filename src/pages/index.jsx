@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { styled, theme } from '../../stitches.config';
-
 import { IoLogoTwitter, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5';
 
 const Homepage = styled('div', {
@@ -21,16 +20,17 @@ const Grid = styled('div', {
 });
 
 const CircleContainer = styled('div', {
-  margin: '0 -38px',
   overflowX: 'hidden',
   gridRow: '3 / span 4',
 });
 
 const Circle = styled('div', {
-  width: '450px',
-  height: '450px',
+  width: '90vw',
+  height: '90vw',
+  margin: '0 auto',
   borderRadius: '100%',
   background: theme.colors.darkBackground,
+  filter: theme.shadows.dropShadow,
 });
 
 const ContentWrapper = styled('div', {
@@ -46,15 +46,17 @@ const ContentWrapper = styled('div', {
 const Name = styled('p', {
   fontSize: '1.2rem',
   textTransform: 'uppercase',
+  filter: theme.shadows.dropShadow,
 });
 
 const Role = styled('h1', {
   fontSize: '1.8rem',
   margin: '0.2rem 0',
   color: theme.colors.lightText,
-  '-webkit-text-stroke-width': '1px',
+  '-webkit-text-stroke-width': '1.25px',
   '-webkit-text-stroke-color': theme.colors.darkText,
   letterSpacing: '0.05rem',
+  filter: theme.shadows.dropShadow,
 });
 
 const SocialLinks = styled('ul', {
@@ -67,6 +69,7 @@ const SocialLinks = styled('ul', {
     a: {
       fontSize: '1.5rem',
       color: theme.colors.slate800,
+      filter: theme.shadows.dropShadow,
     },
   },
 });

@@ -45,8 +45,13 @@ export const { styled, getCssText, theme } = createStitches({
       3: '500',
       5: '700',
     },
+    shadows: {
+      boxShadow: '0 25px 50px -12px rgb(0 0 0 / 0.25)',
+      dropShadow: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
+    },
   },
   media: {
+    xs: '(min-width: 390px)',
     sm: '(min-width: 640px)',
     md: '(min-width: 768px)',
     lg: '(min-width: 1024px)',
