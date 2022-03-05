@@ -40,6 +40,10 @@ export default function Home() {
     <Homepage>
       <Head>
         <title>Damien Sedgwick | Frontend Developer</title>
+        <meta
+          name='description'
+          content='One day I will have written something really meaningful to go here!'
+        />
       </Head>
 
       <ContentWrapper>
