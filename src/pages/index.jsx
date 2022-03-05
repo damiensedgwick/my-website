@@ -69,27 +69,27 @@ const NavigationWrapper = styled('div', {
 
 export default function Home() {
   return (
-    <Homepage id={'homepage'}>
+    <Homepage>
       <Head>
         <title>Use Stitches with Next.js</title>
       </Head>
 
-      <Grid id={'grid'}>
-        {/*<ContentWrapper>*/}
-        {/*  <Name>Damien Sedgwick</Name>*/}
-        {/*  <Role>Frontend Developer</Role>*/}
-        {/*  <SocialLinks>*/}
-        {/*    <li>*/}
-        {/*      <a href='https://github.com/damiensedgwick'>Github</a>*/}
-        {/*    </li>*/}
-        {/*    <li>*/}
-        {/*      <a href='https://linkedin.com/in/damiensedgwick/'>LinkedIn</a>*/}
-        {/*    </li>*/}
-        {/*    <li>*/}
-        {/*      <a href='https://twitter.com/damiensedgwick'>Twitter</a>*/}
-        {/*    </li>*/}
-        {/*  </SocialLinks>*/}
-        {/*</ContentWrapper>*/}
+      <Grid>
+        <ContentWrapper>
+          <Name>Damien Sedgwick</Name>
+          <Role>Frontend Developer</Role>
+          <SocialLinks>
+            <li>
+              <a href='https://github.com/damiensedgwick'>Github</a>
+            </li>
+            <li>
+              <a href='https://linkedin.com/in/damiensedgwick/'>LinkedIn</a>
+            </li>
+            <li>
+              <a href='https://twitter.com/damiensedgwick'>Twitter</a>
+            </li>
+          </SocialLinks>
+        </ContentWrapper>
 
         <CircleContainer>
           <Circle />
