@@ -1,8 +1,9 @@
-import type { AppProps } from "next/app";
-
-import "tailwindcss/tailwind.css";
+import type { AppProps } from 'next/app';
+import { globalStyles } from '../../stitches.config';
 
 function MyApp({ Component, pageProps }: AppProps) {
+  globalStyles();
+
   return <Component {...pageProps} />;
 }
 
