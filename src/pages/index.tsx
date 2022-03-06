@@ -50,6 +50,16 @@ const ContentWrapper = styled('div', {
   },
 });
 
+const ThemeToggleButton = styled('button', {
+  fontSize: '1rem',
+  gridColumn: '6 / span 1',
+  border: 'none',
+  background: 'none',
+  maxWidth: '40px',
+  maxHeight: '40px',
+  margin: 'auto',
+});
+
 export default function Home() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [prefersDarkTheme, setPrefersDarkTheme] = useState(false);
@@ -69,34 +79,42 @@ export default function Home() {
       {isLoading ? (
         <LoadingSpinner prefersDarkTheme={prefersDarkTheme} />
       ) : (
-        <ContentWrapper>
-          <Title theme={prefersDarkTheme ? 'dark' : 'light'}>
-            Damien Sedgwick
-          </Title>
-          <Subtitle theme={prefersDarkTheme ? 'dark' : 'light'}>
-            Frontend Developer
-          </Subtitle>
-          <SocialLinks prefersDarkTheme={prefersDarkTheme}>
-            <li>
-              <a
-                href='https://linkedin.com/in/damiensedgwick/'
-                title={'LinkedIn'}
-              >
-                <IoLogoLinkedin />
-              </a>
-            </li>
-            <li>
-              <a href='https://github.com/damiensedgwick/' title={'Github'}>
-                <IoLogoGithub />
-              </a>
-            </li>
-            <li>
-              <a href='https://twitter.com/damiensedgwick' title={'Twitter'}>
-                <IoLogoTwitter />
-              </a>
-            </li>
-          </SocialLinks>
-        </ContentWrapper>
+        <>
+          <ThemeToggleButton
+            onClick={() => setPrefersDarkTheme(!prefersDarkTheme)}
+          >
+            {prefersDarkTheme ? <span>☀️</span> : <span>😎</span>}
+          </ThemeToggleButton>
+
+          <ContentWrapper>
+            <Title theme={prefersDarkTheme ? 'dark' : 'light'}>
+              Damien Sedgwick
+            </Title>
+            <Subtitle theme={prefersDarkTheme ? 'dark' : 'light'}>
+              Frontend Developer
+            </Subtitle>
+            <SocialLinks prefersDarkTheme={prefersDarkTheme}>
+              <li>
+                <a
+                  href='https://linkedin.com/in/damiensedgwick/'
+                  title={'LinkedIn'}
+                >
+                  <IoLogoLinkedin />
+                </a>
+              </li>
+              <li>
+                <a href='https://github.com/damiensedgwick/' title={'Github'}>
+                  <IoLogoGithub />
+                </a>
+              </li>
+              <li>
+                <a href='https://twitter.com/damiensedgwick' title={'Twitter'}>
+                  <IoLogoTwitter />
+                </a>
+              </li>
+            </SocialLinks>
+          </ContentWrapper>
+        </>
       )}
     </Homepage>
   );
