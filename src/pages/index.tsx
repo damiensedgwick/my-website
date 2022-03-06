@@ -1,25 +1,24 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import { styled, theme } from '../../stitches.config';
-import { SocialLinks } from '../components/SocialLinks';
-import { Title } from '../components/Title';
-import { Subtitle } from '../components/Subtitle';
-import { IoLogoGithub, IoLogoLinkedin, IoLogoTwitter } from 'react-icons/io5';
 import { useInterval } from '../hooks/useInterval';
 import { LoadingSpinner } from '../components/LoadingSpinner';
+import { getPosts } from '../scripts/fileSystem';
+import { Intro } from '../components/Intro';
 
 const Homepage = styled('div', {
   width: '100vw',
   height: '100vh',
   display: 'grid',
   padding: '1rem',
-  gridTemplateRows: 'repeat(6, 1fr)',
+  gridTemplateRows: 'repeat(7, 1fr)',
   gridTemplateColumns: '1fr',
-  gridGap: '0.2rem',
+  gridGap: '0.25rem',
 
   '@lg': {
-    gridTemplateRows: 'repeat(6, 1fr)',
-    gridTemplateColumns: 'repeat(6, 1fr)',
+    gridTemplateRows: 'repeat(7, 1fr)',
+    gridTemplateColumns: 'repeat(7, 1fr)',
+    gridGap: '0.5rem',
   },
 
   variants: {
@@ -36,21 +35,6 @@ const Homepage = styled('div', {
   },
 });
 
-const ContentWrapper = styled('div', {
-  maxWidth: '100vw',
-  gridRow: '2 / span 1',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-
-  '@lg': {
-    gridRow: '3 / span 2',
-    gridColumn: '2 / span 3',
-    alignItems: 'start',
-  },
-});
-
 const ThemeToggleButton = styled('button', {
   fontSize: '1rem',
   gridRow: '1 / span 1',
@@ -62,17 +46,37 @@ const ThemeToggleButton = styled('button', {
   margin: '0 0 0 auto',
 
   '@lg': {
-    gridRow: '1 / span 1',
-    gridColumn: '6 / span 1',
+    gridRow: '1',
+    gridColumn: '6 / span 2',
     alignItems: 'start',
   },
 });
 
-export default function Home() {
+const FeaturedPosts = styled('div', {
+  maxWidth: '100vw',
+  gridRow: '4 / span 3',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  background: theme.colors.secondary,
+
+  '@lg': {
+    gridRow: '2 / span 5  ',
+    gridColumn: '5 / span 2',
+    alignItems: 'start',
+  },
+});
+
+interface HomeProps {
+  posts: any;
+}
+
+export default function Home({ posts }: HomeProps) {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [prefersDarkTheme, setPrefersDarkTheme] = useState(false);
 
-  useInterval(() => setIsLoading(false), 1500);
+  useInterval(() => setIsLoading(false), 500);
 
   return (
     <Homepage theme={prefersDarkTheme ? 'dark' : 'light'}>
@@ -94,36 +98,27 @@ export default function Home() {
             {prefersDarkTheme ? <span>☀️</span> : <span>😎</span>}
           </ThemeToggleButton>
 
-          <ContentWrapper>
-            <Title theme={prefersDarkTheme ? 'dark' : 'light'}>
-              Damien Sedgwick
-            </Title>
-            <Subtitle theme={prefersDarkTheme ? 'dark' : 'light'}>
-              Frontend Developer
-            </Subtitle>
-            <SocialLinks prefersDarkTheme={prefersDarkTheme}>
-              <li>
-                <a
-                  href='https://linkedin.com/in/damiensedgwick/'
-                  title={'LinkedIn'}
-                >
-                  <IoLogoLinkedin />
-                </a>
-              </li>
-              <li>
-                <a href='https://github.com/damiensedgwick/' title={'Github'}>
-                  <IoLogoGithub />
-                </a>
-              </li>
-              <li>
-                <a href='https://twitter.com/damiensedgwick' title={'Twitter'}>
-                  <IoLogoTwitter />
-                </a>
-              </li>
-            </SocialLinks>
-          </ContentWrapper>
+          <Intro prefersDarkTheme={prefersDarkTheme} />
+
+          <FeaturedPosts>
+            {posts.map((post: any) => (
+              <a href={'/posts/' + post.slug} key={post.slug}>
+                {post.slug}
+              </a>
+            ))}
+          </FeaturedPosts>
         </>
       )}
     </Homepage>
   );
 }
+
+export const getStaticProps = () => {
+  const posts = getPosts(3);
+
+  return {
+    props: {
+      posts,
+    },
+  };
+};
