@@ -31,7 +31,7 @@ export const { styled, getCssText, theme } = createStitches({
       slate900: '#0F172A',
 
       primary: '$slate100',
-      secondary: '$slate800',
+      secondary: '$slate900',
     },
     fonts: {
       roboto: 'roboto',
