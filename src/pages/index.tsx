@@ -6,6 +6,7 @@ import { Title } from '../components/Title';
 import { Subtitle } from '../components/Subtitle';
 import { IoLogoGithub, IoLogoLinkedin, IoLogoTwitter } from 'react-icons/io5';
 import { useInterval } from '../hooks/useInterval';
+import { keyframes } from '@stitches/react';
 
 const Homepage = styled('div', {
   width: '100vw',
@@ -50,6 +51,20 @@ const LoadingSpinner = styled('div', {
   },
 });
 
+const spin = keyframes({
+  to: { transform: 'rotate(360deg)' },
+});
+
+const Spinner = styled('div', {
+  display: 'inline-block',
+  width: '50px',
+  height: '50px',
+  border: `4px solid ${theme.colors.darkBackground}`,
+  borderRadius: '50%',
+  borderTopColor: theme.colors.slate400,
+  animation: `${spin} 750ms ease-in-out infinite`,
+});
+
 export default function Home() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -66,7 +81,9 @@ export default function Home() {
       </Head>
 
       {isLoading ? (
-        <LoadingSpinner>Loading...</LoadingSpinner>
+        <LoadingSpinner>
+          <Spinner />
+        </LoadingSpinner>
       ) : (
         <ContentWrapper>
           <Title>Damien Sedgwick</Title>
