@@ -10,8 +10,8 @@ const Spinner = styled('div', {
   gridRow: '3 / span 2',
   alignSelf: 'center',
   display: 'inline-block',
-  width: '70px',
-  height: '70px',
+  width: '50px',
+  height: '50px',
   borderRadius: '50%',
   animation: `${spin} 1s ease-in-out infinite`,
 
