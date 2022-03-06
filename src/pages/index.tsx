@@ -12,6 +12,7 @@ const Homepage = styled('div', {
   width: '100vw',
   height: '100vh',
   display: 'grid',
+  padding: '1rem',
   gridTemplateRows: 'repeat(6, 1fr)',
   gridTemplateColumns: '1fr',
   gridGap: '0.2rem',
@@ -37,7 +38,7 @@ const Homepage = styled('div', {
 
 const ContentWrapper = styled('div', {
   maxWidth: '100vw',
-  gridRow: '1 / span 2',
+  gridRow: '2 / span 1',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -52,12 +53,19 @@ const ContentWrapper = styled('div', {
 
 const ThemeToggleButton = styled('button', {
   fontSize: '1rem',
-  gridColumn: '6 / span 1',
+  gridRow: '1 / span 1',
+  gridColumn: '1 / span 1',
   border: 'none',
   background: 'none',
   maxWidth: '40px',
   maxHeight: '40px',
-  margin: 'auto',
+  margin: '0 0 0 auto',
+
+  '@lg': {
+    gridRow: '1 / span 1',
+    gridColumn: '6 / span 1',
+    alignItems: 'start',
+  },
 });
 
 export default function Home() {
