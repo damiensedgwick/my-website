@@ -9,17 +9,17 @@ const Spinner = styled('div', {
   margin: 'auto',
   gridRow: '3 / span 2',
   alignSelf: 'center',
+  display: 'inline-block',
+  width: '70px',
+  height: '70px',
+  borderRadius: '50%',
+  animation: `${spin} 1s ease-in-out infinite`,
 
   '@lg': {
     gridRow: '3 / span 2',
     gridColumn: '3 / span 2',
     alignSelf: 'center',
     textAlign: 'center',
-    display: 'inline-block',
-    width: '50px',
-    height: '50px',
-    borderRadius: '50%',
-    animation: `${spin} 750ms ease-in-out infinite`,
   },
 
   variants: {
