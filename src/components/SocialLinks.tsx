@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import { styled, theme } from '../../stitches.config';
 
-export const SocialLinks = styled('ul', {
+export const Links = styled('ul', {
   display: 'flex',
 
   li: {
@@ -13,8 +14,36 @@ export const SocialLinks = styled('ul', {
 
     a: {
       fontSize: '1.5rem',
-      color: theme.colors.slate800,
-      filter: theme.shadows.dropShadow,
+    },
+  },
+
+  variants: {
+    theme: {
+      light: {
+        li: {
+          a: {
+            color: theme.colors.secondary,
+            filter: theme.shadows.dropShadow,
+          },
+        },
+      },
+      dark: {
+        li: {
+          a: {
+            color: theme.colors.primary,
+            filter: theme.shadows.dropShadow,
+          },
+        },
+      },
     },
   },
 });
+
+interface SocialLinksProps {
+  prefersDarkTheme: boolean;
+}
+
+export const SocialLinks: FC<SocialLinksProps> = ({
+  children,
+  prefersDarkTheme,
+}) => <Links theme={prefersDarkTheme ? 'dark' : 'light'}>{children}</Links>;

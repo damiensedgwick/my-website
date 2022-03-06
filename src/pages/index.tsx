@@ -15,11 +15,23 @@ const Homepage = styled('div', {
   gridTemplateRows: 'repeat(6, 1fr)',
   gridTemplateColumns: '1fr',
   gridGap: '0.2rem',
-  background: theme.colors.lightBackground,
 
   '@lg': {
     gridTemplateRows: 'repeat(6, 1fr)',
     gridTemplateColumns: 'repeat(6, 1fr)',
+  },
+
+  variants: {
+    theme: {
+      light: {
+        color: theme.colors.secondary,
+        background: theme.colors.primary,
+      },
+      dark: {
+        color: theme.colors.primary,
+        background: theme.colors.secondary,
+      },
+    },
   },
 });
 
@@ -40,11 +52,12 @@ const ContentWrapper = styled('div', {
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [prefersDarkTheme, setPrefersDarkTheme] = useState(false);
 
   useInterval(() => setIsLoading(false), 1500);
 
   return (
-    <Homepage>
+    <Homepage theme={prefersDarkTheme ? 'dark' : 'light'}>
       <Head>
         <title>Damien Sedgwick | Frontend Developer</title>
         <meta
@@ -54,12 +67,16 @@ export default function Home() {
       </Head>
 
       {isLoading ? (
-        <LoadingSpinner />
+        <LoadingSpinner prefersDarkTheme={prefersDarkTheme} />
       ) : (
         <ContentWrapper>
-          <Title>Damien Sedgwick</Title>
-          <Subtitle>Frontend Developer</Subtitle>
-          <SocialLinks>
+          <Title theme={prefersDarkTheme ? 'dark' : 'light'}>
+            Damien Sedgwick
+          </Title>
+          <Subtitle theme={prefersDarkTheme ? 'dark' : 'light'}>
+            Frontend Developer
+          </Subtitle>
+          <SocialLinks prefersDarkTheme={prefersDarkTheme}>
             <li>
               <a
                 href='https://linkedin.com/in/damiensedgwick/'

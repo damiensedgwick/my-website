@@ -1,4 +1,4 @@
-import { createStitches, globalCss } from '@stitches/react';
+import { createStitches, createTheme, globalCss } from '@stitches/react';
 
 export const globalStyles = globalCss({
   '*, *::before, *::after': {
@@ -30,11 +30,8 @@ export const { styled, getCssText, theme } = createStitches({
       slate800: '#1E293B',
       slate900: '#0F172A',
 
-      lightText: '$slate100',
-      lightBackground: '$slate100',
-
-      darkText: '$slate900',
-      darkBackground: '$slate900',
+      primary: '$slate100',
+      secondary: '$slate800',
     },
     fonts: {
       roboto: 'roboto',
@@ -55,5 +52,12 @@ export const { styled, getCssText, theme } = createStitches({
     md: '(min-width: 768px)',
     lg: '(min-width: 1024px)',
     xl: '(min-width: 1280px)',
+  },
+});
+
+const dark = createTheme({
+  colors: {
+    primary: '$slate900',
+    secondary: '$slate100',
   },
 });
