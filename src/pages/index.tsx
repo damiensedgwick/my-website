@@ -19,6 +19,8 @@ export default function Home({ posts }: HomeProps) {
 
   useInterval(() => setIsLoading(false), 1000);
 
+  console.log(posts[0]);
+
   return (
     <Homepage theme={prefersDarkTheme ? 'dark' : 'light'}>
       <Head>

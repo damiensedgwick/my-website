@@ -1,7 +1,13 @@
 import Head from 'next/head';
 
-<Head>
-  <title>Test One</title>
-</Head>
+export const meta = {
+  date: '07-03-2022',
+  author: 'Damien Sedgwick',
+  title: 'My 1st blog post',
+  excerpt: 'Join me as we take a look at solving programming challenges using Golang and TDD',
+  featureImageUrl: 'https://gravatar.com/avatar/90eeb962d8324d7f5dab13daaa191aff?s=200&d=robohash&r=x'
+}
 
-# Test One
+<Head>
+  <title>{meta.title}</title>
+</Head>
