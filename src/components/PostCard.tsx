@@ -11,7 +11,6 @@ const Link = styled('a', {
 
   '@sm': {
     height: '105px',
-    background: 'pink',
   },
 
   '@md': {
@@ -20,7 +19,6 @@ const Link = styled('a', {
 
   '@lg': {
     height: '115px',
-    background: 'pink',
   },
 
   h2: {
