@@ -2,8 +2,8 @@ import { styled, theme } from '../../stitches.config';
 import { keyframes } from '@stitches/react';
 
 const spin = keyframes({
-  from: { transform: 'rotate(0)' },
-  to: { transform: 'rotate(360deg)' },
+  '0': { transform: 'rotate(0)' },
+  '100%': { transform: 'rotate(360deg)' },
 });
 
 const Spinner = styled('div', {
