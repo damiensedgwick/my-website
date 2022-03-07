@@ -6,15 +6,24 @@ import { styled } from '../../stitches.config';
 
 const ContentWrapper = styled('div', {
   maxWidth: '100vw',
+  gridColumn: '1 / span 3',
   gridRow: '2 / span 1',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
 
+  '@sm': {
+    gridColumn: '1 / span 5',
+  },
+
+  '@md': {
+    gridColumn: '3 / span 3',
+  },
+
   '@lg': {
-    gridRow: '3 / span 3',
-    gridColumn: '2 / span 3',
+    gridColumn: '2 / span 4',
+    gridRow: '4 / span 1',
     alignItems: 'start',
   },
 });
