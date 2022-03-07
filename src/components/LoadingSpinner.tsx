@@ -7,6 +7,7 @@ const spin = keyframes({
 
 const Spinner = styled('div', {
   margin: 'auto',
+  gridColumn: '2',
   gridRow: '3 / span 3',
   alignSelf: 'center',
   display: 'inline-block',
@@ -15,11 +16,20 @@ const Spinner = styled('div', {
   borderRadius: '50%',
   animation: `${spin} 1s ease-in-out infinite`,
 
+  '@sm': {
+    gridColumn: '3',
+  },
+
+  '@md': {
+    gridColumn: '4',
+  },
+
   '@lg': {
-    gridRow: '3 / span 3',
-    gridColumn: '3 / span 3',
-    alignSelf: 'center',
-    textAlign: 'center',
+    gridColumn: '5',
+  },
+
+  '@xl': {
+    gridColumn: '6',
   },
 
   variants: {

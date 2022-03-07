@@ -2,8 +2,12 @@ import { FC } from 'react';
 import { styled, theme } from '../../stitches.config';
 
 const Posts = styled('div', {
+  padding: '0.75rem',
   gridColumn: '1 / span 3',
   gridRow: '4 / span 3',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-evenly',
 
   '@sm': {
     gridColumn: '2 / span 3',
