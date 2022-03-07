@@ -34,9 +34,7 @@ interface IntroProps {
 
 export const Intro = ({ prefersDarkTheme }: IntroProps) => (
   <ContentWrapper>
-    <Title theme={prefersDarkTheme ? 'dark' : 'light'}>
-      Damien Sedgwick...
-    </Title>
+    <Title theme={prefersDarkTheme ? 'dark' : 'light'}>Damien Sedgwick</Title>
     <Subtitle theme={prefersDarkTheme ? 'dark' : 'light'}>
       Frontend Developer
     </Subtitle>
