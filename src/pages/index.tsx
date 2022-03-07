@@ -7,6 +7,7 @@ import { FeaturedPosts } from '../components/FeaturedPosts';
 import { useInterval } from '../hooks/useInterval';
 import { LoadingSpinner } from '../components/LoadingSpinner';
 import { getPosts } from '../scripts/fileSystem';
+import { PostCard } from '../components/PostCard';
 
 interface HomeProps {
   posts: any;
@@ -42,9 +43,7 @@ export default function Home({ posts }: HomeProps) {
 
           <FeaturedPosts prefersDarkTheme={prefersDarkTheme}>
             {posts.map((post: any) => (
-              <a href={'/posts/' + post.slug} key={post.slug}>
-                {post.slug}
-              </a>
+              <PostCard post={post} key={post.slug} />
             ))}
           </FeaturedPosts>
         </>

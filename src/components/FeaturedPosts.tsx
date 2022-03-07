@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { styled, theme } from '../../stitches.config';
 
 const Posts = styled('div', {
-  padding: '0.75rem',
+  padding: '0 0.5rem',
   gridColumn: '1 / span 3',
   gridRow: '4 / span 3',
   display: 'flex',
