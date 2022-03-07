@@ -1,13 +1,27 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import { styled } from '@stitches/react';
-import { theme } from '../../stitches.config';
+import { styled, theme } from '../../stitches.config';
 
 const Link = styled('a', {
   display: 'flex',
   textDecoration: 'none',
+  color: theme.colors.secondary,
   background: theme.colors.primary,
-  maxHeight: '105px',
+  minHeight: '90px',
+
+  '@sm': {
+    height: '105px',
+    background: 'pink',
+  },
+
+  '@md': {
+    height: '110px',
+  },
+
+  '@lg': {
+    height: '115px',
+    background: 'pink',
+  },
 
   h2: {
     fontSize: '1rem',

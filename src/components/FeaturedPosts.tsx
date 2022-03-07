@@ -7,7 +7,7 @@ const Posts = styled('div', {
   gridRow: '4 / span 4',
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'space-evenly',
+  justifyContent: 'space-around',
 
   '@sm': {
     gridColumn: '2 / span 3',
