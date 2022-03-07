@@ -2,7 +2,13 @@ import { styled, theme } from '../../stitches.config';
 import { keyframes } from '@stitches/react';
 
 const spin = keyframes({
-  to: { transform: 'rotate(360deg)' },
+  to: {
+    transform: 'rotate(360deg)',
+    '-webkit-transform': 'rotate(360deg)',
+    '-o-transform': 'rotate(360deg)',
+    '-ms-transform': 'rotate(360deg)',
+    '-moz-transform': 'rotate(360deg)',
+  },
 });
 
 const Spinner = styled('div', {
@@ -15,7 +21,6 @@ const Spinner = styled('div', {
   height: '50px',
   borderRadius: '50%',
   animation: `${spin} 750ms ease-in-out infinite`,
-  '-webkit-animation': `${spin} 750ms ease-in-out infinite`,
 
   '@sm': {
     gridColumn: '3',
