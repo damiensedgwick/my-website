@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Users/damiensedgwick/Development/_Personal/my-website/app/routes/index.tsx?browser", "../../../app/routes/index.tsx"],
+  "sourcesContent": ["export { default } from \"/Users/damiensedgwick/Development/_Personal/my-website/app/routes/index.tsx\";", "import { Link } from 'remix';\n\nexport default function Index() {\n  return (\n    <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.4' }}>\n      <h1>Welcome to Remix</h1>\n      <Link to='/posts'>Posts</Link>\n    </div>\n  );\n}\n"],
+  "mappings": ";;;;;;;;;AAAA;;;ACAA;AAEe,iBAAiB;AAC9B,SACE,oCAAC,OAAD;AAAA,IAAK,OAAO,EAAE,YAAY,yBAAyB,YAAY;AAAA,KAC7D,oCAAC,MAAD,MAAI,qBACJ,oCAAC,MAAD;AAAA,IAAM,IAAG;AAAA,KAAS;AAAA;",
+  "names": []
+}

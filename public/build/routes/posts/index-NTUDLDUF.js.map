@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Users/damiensedgwick/Development/_Personal/my-website/app/routes/posts/index.tsx?browser", "../../../../app/routes/posts/index.tsx"],
+  "sourcesContent": ["export { default } from \"/Users/damiensedgwick/Development/_Personal/my-website/app/routes/posts/index.tsx\";", "import { json, Link, useLoaderData } from 'remix';\n\nimport { getPosts } from '~/post';\nimport type { Post } from '~/post';\n\nexport type Post = {\n  slug: string;\n  title: string;\n};\n\nexport const loader = async () => {\n  return json(getPosts());\n};\n\nexport default function Posts() {\n  const posts = useLoaderData<Post[]>();\n\n  return (\n    <main>\n      <h1>Posts</h1>\n      <ul>\n        {posts.map((post) => (\n          <li key={post.slug}>\n            <Link to={post.slug}>{post.title}</Link>\n          </li>\n        ))}\n      </ul>\n    </main>\n  );\n}\n"],
+  "mappings": ";;;;;;;;AAAA;;;ACAA;AAce,iBAAiB;AAC9B,QAAM,QAAQ;AAEd,SACE,oCAAC,QAAD,MACE,oCAAC,MAAD,MAAI,UACJ,oCAAC,MAAD,MACG,MAAM,IAAI,CAAC,SACV,oCAAC,MAAD;AAAA,IAAI,KAAK,KAAK;AAAA,KACZ,oCAAC,MAAD;AAAA,IAAM,IAAI,KAAK;AAAA,KAAO,KAAK;AAAA;",
+  "names": []
+}

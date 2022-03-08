@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Users/damiensedgwick/Development/_Personal/my-website/app/routes/posts/index.tsx?browser"],
+  "sourcesContent": ["export * from \"/Users/damiensedgwick/Development/_Personal/my-website/app/routes/posts/index.tsx\";"],
+  "mappings": ";;;;;AAAA;",
+  "names": []
+}
