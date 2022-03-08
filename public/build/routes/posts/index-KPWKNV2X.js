@@ -1,0 +1,1 @@
+import{e as o,f as t,h as s,l as i}from"/build/_shared/chunk-QN4KYTZP.js";t();t();function n(){let l=i();return o.createElement("main",null,o.createElement("h1",null,"Posts"),o.createElement("ul",null,l.map(r=>o.createElement("li",{key:r.slug},o.createElement(s,{to:r.slug},r.title)))))}export{n as default};
