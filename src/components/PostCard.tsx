@@ -3,11 +3,13 @@ import Image from 'next/image';
 import { styled, theme } from '../../stitches.config';
 
 const Link = styled('a', {
+  paddingRight: '0.5rem',
   display: 'flex',
   textDecoration: 'none',
   color: theme.colors.secondary,
   background: theme.colors.primary,
   minHeight: '90px',
+  border: `solid 2px ${theme.colors.secondary}`,
 
   '@sm': {
     height: '105px',
