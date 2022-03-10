@@ -88,12 +88,6 @@ export default function Home() {
         <LoadingSpinner prefersDarkTheme={prefersDarkTheme} />
       ) : (
         <>
-          <ThemeToggleButton
-            onClick={() => setPrefersDarkTheme(!prefersDarkTheme)}
-          >
-            {prefersDarkTheme ? <span>☀️</span> : <span>😎</span>}
-          </ThemeToggleButton>
-
           <ContentWrapper>
             <Title theme={prefersDarkTheme ? 'dark' : 'light'}>
               Damien Sedgwick
