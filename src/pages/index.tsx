@@ -72,7 +72,7 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [prefersDarkTheme, setPrefersDarkTheme] = useState(false);
 
-  useInterval(() => setIsLoading(false), 1500);
+  useInterval(() => setIsLoading(false), 500);
 
   return (
     <Homepage theme={prefersDarkTheme ? 'dark' : 'light'}>
