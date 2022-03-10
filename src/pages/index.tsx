@@ -51,23 +51,6 @@ const ContentWrapper = styled('div', {
   },
 });
 
-const ThemeToggleButton = styled('button', {
-  fontSize: '1rem',
-  gridRow: '1 / span 1',
-  gridColumn: '1 / span 1',
-  border: 'none',
-  background: 'none',
-  maxWidth: '40px',
-  maxHeight: '40px',
-  margin: '0 0 0 auto',
-
-  '@lg': {
-    gridRow: '1 / span 1',
-    gridColumn: '6 / span 1',
-    alignItems: 'start',
-  },
-});
-
 export default function Home() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [prefersDarkTheme, setPrefersDarkTheme] = useState(false);
