@@ -76,7 +76,7 @@ export default function Home() {
               Damien Sedgwick
             </Title>
             <Subtitle theme={prefersDarkTheme ? 'dark' : 'light'}>
-              Frontend Developer
+              Software Developer
             </Subtitle>
             <SocialLinks prefersDarkTheme={prefersDarkTheme}>
               <li>
