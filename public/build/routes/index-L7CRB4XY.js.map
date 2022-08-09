@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:routes/index.tsx?browser", "../../../app/routes/index.tsx", "../../../app/components/header.tsx"],
+  "sourcesContent": ["export { default } from \"./routes/index.tsx\";", "import { Header } from \"~/components/header\";\n\nexport default function Index() {\n  return (\n    <div>\n      <Header />\n    </div>\n  );\n}\n", "import { ReactNode } from \"react\";\n\ninterface WrapperProps {\n  children: ReactNode;\n}\n\nfunction Wrapper({ children }: WrapperProps) {\n  return <div>{children}</div>;\n}\n\nfunction Content() {\n  return (\n    <div>\n      <h1>Damien Sedgwick</h1>\n      <p>Software Developer</p>\n      <ul>\n        <li>\n          <a href=\"#\">1</a>\n        </li>\n        <li>\n          <a href=\"#\">2</a>\n        </li>\n        <li>\n          <a href=\"#\">3</a>\n        </li>\n      </ul>\n    </div>\n  );\n}\n\nexport const Header = {\n  Wrapper,\n  Content,\n};\n"],
+  "mappings": ";;;;;;AAAA;;;ACAA;;;ACAA;AAMA,iBAAiB,EAAE,YAA0B;AAC3C,SAAO,oCAAC,OAAD,MAAM;AAAA;AAGf,mBAAmB;AACjB,SACE,oCAAC,OAAD,MACE,oCAAC,MAAD,MAAI,oBACJ,oCAAC,KAAD,MAAG,uBACH,oCAAC,MAAD,MACE,oCAAC,MAAD,MACE,oCAAC,KAAD;AAAA,IAAG,MAAK;AAAA,KAAI,OAEd,oCAAC,MAAD,MACE,oCAAC,KAAD;AAAA,IAAG,MAAK;AAAA,KAAI,OAEd,oCAAC,MAAD,MACE,oCAAC,KAAD;AAAA,IAAG,MAAK;AAAA,KAAI;AAAA;AAOf,IAAM,SAAS;AAAA,EACpB;AAAA,EACA;AAAA;;;AD9Ba,iBAAiB;AAC9B,SACE,oCAAC,OAAD,MACE,oCAAC,QAAD;AAAA;",
+  "names": []
+}

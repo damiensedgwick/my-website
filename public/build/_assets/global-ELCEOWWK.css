@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "roboto";
+    src: url("/fonts/roboto/roboto.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+:root {
+    /* colours */
+    --slate-50: #F8FAFC;
+    --slate-100: #F1F5F9;
+    --slate-200: #E2E8F0;
+    --slate-300: #CBD5E1;
+    --slate-400: #94A3B8;
+    --slate-500: #64748B;
+    --slate-600: #475569;
+    --slate-700: #334155;
+    --slate-800: #1E293B;
+    --slate-900: #0F172A;
+    --primary-colour: var(--slate-800);
+    --secondary-colour: var(--slate-200);
+    --primary-bg: var(--slate-200);
+    --secondary-bg: var(--slate-800);
+
+    /* fonts */
+    --font-body: -apple-system, "Segoe UI", Helvetica Neue, Helvetica, Roboto,
+    Arial, sans-serif, system-ui, "Apple Color Emoji", "Segoe UI Emoji";
+    --font-display: roboto, var(--font-body);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--primary-colour);
+    background-color: var(--primary-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: var(--font-display);
+}
