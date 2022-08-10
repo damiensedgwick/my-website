@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["browser-route-module:routes/index.tsx?browser", "../../../app/routes/index.tsx"],
-  "sourcesContent": ["export { default } from \"./routes/index.tsx\";", "import { Header } from \"~/components/header\";\n\nexport default function Index() {\n  return (\n    <div>\n      <Header />\n    </div>\n  );\n}\n"],
-  "mappings": ";;;;;;AAAA;;;ACAA;AAEe,iBAAiB;AAC9B,SACE,oCAAC,OAAD,MACE,oCAAC,QAAD;AAAA;",
-  "names": []
-}
