@@ -1,4 +1,5 @@
 import { IoLogoGithub, IoLogoLinkedin, IoLogoTwitter } from 'react-icons/io5';
+import { CVDownload } from '~/components/cv-download';
 
 export function Header() {
   return (
@@ -24,6 +25,8 @@ export function Header() {
           </li>
         </ul>
       </div>
+
+      <CVDownload />
     </header>
   );
 }

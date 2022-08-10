@@ -1,5 +1,6 @@
 import { LinksFunction, MetaFunction } from '@remix-run/node';
 import { Header } from '~/components/header';
+
 import stylesUrl from '~/styles/index.css';
 
 export let links: LinksFunction = () => {
