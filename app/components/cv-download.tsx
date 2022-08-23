@@ -2,7 +2,7 @@ export function CVDownload() {
   return (
     <button
       type='button'
-      onClick={() => window.open('/assets/cv_damien-sedgwick.pdf')}
+      onClick={() => window.open('/assets/damien-sedgwick_cv.pdf')}
     >
       CV
     </button>
