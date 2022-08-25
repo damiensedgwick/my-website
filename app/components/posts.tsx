@@ -13,7 +13,7 @@ export function Posts({ posts }: PostsProps) {
         <ul>
           {posts.map((post) => (
             <li key={post.title}>
-              <a href={post.url} target='_blank'>
+              <a href={post.url} title={post.title} target='_blank'>
                 <img src={post.social_image} alt={post.title} />
               </a>
             </li>

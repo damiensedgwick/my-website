@@ -1,6 +1,4 @@
 import { IoLogoGithub, IoLogoLinkedin, IoLogoTwitter } from 'react-icons/io5';
-import { CVDownload } from '~/components/cv-download';
-import { Post } from '~/types/post';
 
 export function Header() {
   return (
@@ -9,17 +7,29 @@ export function Header() {
       <p>Software Developer</p>
       <ul>
         <li>
-          <a href='https://linkedin.com/in/damiensedgwick/' title='LinkedIn'>
+          <a
+            href='https://linkedin.com/in/damiensedgwick/'
+            title='LinkedIn'
+            target='_blank'
+          >
             <IoLogoLinkedin />
           </a>
         </li>
         <li>
-          <a href='https://github.com/damiensedgwick/' title='Github'>
+          <a
+            href='https://github.com/damiensedgwick/'
+            title='Github'
+            target='_blank'
+          >
             <IoLogoGithub />
           </a>
         </li>
         <li>
-          <a href='https://twitter.com/damiensedgwick' title='Twitter'>
+          <a
+            href='https://twitter.com/damiensedgwick'
+            title='Twitter'
+            target='_blank'
+          >
             <IoLogoTwitter />
           </a>
         </li>
