@@ -1,7 +1,12 @@
 import { IoLogoGithub, IoLogoLinkedin, IoLogoTwitter } from 'react-icons/io5';
 import { CVDownload } from '~/components/cv-download';
+import { Post } from '~/types/post';
 
-export function Header() {
+interface HeaderProps {
+  posts: Post[];
+}
+
+export function Header({ posts }: HeaderProps) {
   return (
     <header>
       <div>
@@ -25,6 +30,19 @@ export function Header() {
           </li>
         </ul>
       </div>
+
+      {/*<p>Recent Posts</p>*/}
+      {/*<ul>*/}
+      {/*  {posts.slice(0, 3).map((post) => (*/}
+      {/*    <li key={post.title}>*/}
+      {/*      <a href={post.url} target='_blank'>*/}
+      {/*        <img src={post.social_image} alt={post.title} />*/}
+      {/*      </a>*/}
+
+      {/*      <small>{post.positive_reactions_count} likes️</small>*/}
+      {/*    </li>*/}
+      {/*  ))}*/}
+      {/*</ul>*/}
 
       <CVDownload />
     </header>
