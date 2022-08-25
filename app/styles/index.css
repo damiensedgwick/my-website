@@ -1,92 +1,166 @@
-header {
+body {
     width: 100%;
     height: 100%;
+    padding: 0 1rem;
     display: grid;
-    padding: 1rem;
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-columns: 1fr;
-    grid-gap: 0.2rem;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 0.25rem;
 }
 
-header > div {
-    display: flex;
-    flex-direction: column;
-    grid-row: 2 / span 1;
-    align-items: center;
+/* Header content styling */
+body > header {
+    margin: 0 auto;
+    grid-row: 2 / span 2;
+    text-align: center;
 }
 
-header > div > h1 {
+body > header > h1 {
     font-size: clamp(1.6rem, 7vw, 3.2rem);
     text-transform: uppercase;
 }
 
-header > div > p {
+body > header > p {
     margin: 1rem 0;
     font-size: clamp(2rem, 8vw, 3.6rem);
     color: var(--secondary-colour);
-    -webkit-text-stroke-width: 1.25px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--primary-colour);
     letter-spacing: 0.05rem;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-header > div > ul {
-    padding: 0;
+body > header > ul {
     margin: 0;
+    padding: 0;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-header > div > ul > li {
+body > header > ul > li {
     margin: 0 1rem 0 0;
     list-style: none;
     transition: transform .2s;
 }
 
-header > div > ul > li:hover {
+body > header > ul > li:hover {
     transform: scale(1.1);
     transition: transform .2s;
 }
 
-header > div > ul > li > a {
+body > header > ul > li > a {
     font-size: 2.2rem;
     color: var(--primary-colour);
 }
 
-header > button {
-    margin: auto 0 0 auto;
-    width: 50px;
-    height: 50px;
-    grid-row: 6 / span 1;
-    grid-column: 1 / span 1;
-    color: var(--secondary-colour);
-    background: linear-gradient(170deg, var(--slate-800), var(--slate-800), var(--slate-600), var(--slate-200));
-    border: solid 1px var(--primary-colour);
-    border-radius: 50%;
-    cursor: pointer;
+/* Posts content styling */
+body > div {
+    margin: 0 auto;
+    width: 70%;
+    grid-row: 4 / span 4;
 }
 
-@media screen and (min-width: 1024px) {
-    header {
-        grid-template-rows: repeat(6, 1fr);
-        grid-template-columns: repeat(6, 1fr);
+body > div > h2 {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+body > div > div > ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body > div > div > ul > li {
+    list-style: none;
+}
+
+body > div > div > ul > li > a > img {
+    width: 100%;
+    height: auto;
+    margin: 0.25rem 0;
+    border-radius: 8px;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    transition: transform .2s;
+}
+
+body > div > div > ul > li > a > img:hover {
+    transform: scale(1.1);
+    transition: transform .2s;
+}
+
+/* Media Query Styles */
+@media screen and (min-width: 640px) {
+    body > div {
+        margin: 0 auto;
+        width: 40%;
+        grid-row: 4 / span 4;
     }
 
-    header > div {
+    /* Header content styling */
+    body > header > p {
+        -webkit-text-stroke-width: 2px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    /* Header content styling */
+    body > header {
+        grid-column: 2 / span 6;
+    }
+
+    /* Posts content styling */
+    body > div {
+        width: 100%;
+        grid-column: 2 / span 6;
+        grid-row: 5 / span 2;
+    }
+
+    body > div > div > ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    body > div > div > ul > li {
+        margin: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    /* Header content styling */
+    body > header {
+        grid-column: 1 / span 4;
+        grid-row: 4 / span 3;
+        text-align: left;
+    }
+
+    body > header > ul {
+        justify-content: flex-start;
+    }
+
+    /* Posts content styling */
+    body > div {
+        width: 100%;
+        grid-column: 6 / span 2;
+        grid-row: 2 / span 6;
+    }
+
+    body > div > div > ul {
         display: flex;
         flex-direction: column;
-        grid-row: 3 / span 2;
-        grid-column: 2 / span 4;
-        align-items: start;
     }
+}
 
-    header > button {
-        grid-row: 6 / span 1;
-        grid-column: 6 / span 1;
-        transition: transform .2s;
-    }
-
-    header > button:hover {
-        transform:  rotate(360deg) scale(1.1);
-        transition: transform .4s;
+@media screen and (min-width: 1536px) {
+    /* Posts content styling */
+    body > div {
+        width: 75%;
+        grid-column: 6 / span 2;
+        grid-row: 2 / span 6;
     }
 }

@@ -1,7 +1,8 @@
 import { LinksFunction, MetaFunction, json } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
-import { Header } from '~/components/header';
 import { Post } from '~/types/post';
+import { Header } from '~/components/header';
+import { Posts } from '~/components/posts';
 
 import stylesUrl from '~/styles/index.css';
 
@@ -34,7 +35,8 @@ export default function Index() {
 
   return (
     <>
-      <Header posts={posts} />
+      <Header />
+      <Posts posts={posts} />
     </>
   );
 }
