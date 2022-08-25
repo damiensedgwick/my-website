@@ -25,7 +25,11 @@ export async function loader() {
 
   return json(
     posts.map((post: Post) => {
-      return { ...post };
+      return {
+        url: post.url,
+        title: post.title,
+        social_image: post.social_image,
+      };
     })
   );
 }
