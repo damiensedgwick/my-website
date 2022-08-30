@@ -11,7 +11,7 @@ export function Posts({ posts }: PostsProps) {
 
       <div>
         <ul>
-          {posts.map((post) => (
+          {posts.slice(0, 3).map((post) => (
             <li key={post.title}>
               <a href={post.url} title={post.title} target='_blank'>
                 <img src={post.social_image} alt={post.title} />
