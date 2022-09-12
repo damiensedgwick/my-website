@@ -53,6 +53,7 @@ body > header > ul > li:hover {
 body > header > ul > li > a {
     font-size: 2.2rem;
     color: var(--primary-colour);
+
 }
 
 /* Posts content styling */
@@ -82,7 +83,7 @@ body > div > div > ul > li > a > img {
     height: auto;
     margin: 0.25rem 0;
     border-radius: 8px;
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.75);
     transition: transform .2s;
 }
 
