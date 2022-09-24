@@ -18,7 +18,7 @@ export const meta: MetaFunction = () => ({
 
 export async function loader() {
   const res = await fetch(
-    'https://dev.to/api/articles?username=damiensedgwick'
+    'https://dev.to/api/articles?username=damiensedgwick&per_page=3'
   );
 
   const posts = await res.json();
