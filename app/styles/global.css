@@ -1,11 +1,3 @@
-@font-face {
-    font-family: "roboto";
-    src: url("/fonts/roboto/roboto.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-
 :root {
     /* colours */
     --slate-50: #F8FAFC;
@@ -26,9 +18,8 @@
     --secondary-bg: var(--slate-900);
 
     /* fonts */
-    --font-body: -apple-system, "Segoe UI", Helvetica Neue, Helvetica, Roboto,
-    Arial, sans-serif, system-ui, "Apple Color Emoji", "Segoe UI Emoji";
-    --font-display: roboto, var(--font-body);
+    --font-body: Arial;
+    --font-display: var(--font-body);
 }
 
 html {
