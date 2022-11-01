@@ -22,7 +22,8 @@ export default function Home({articles}: HomeProps) {
     <Container maxWidth="xl" sx={{height: "100vh"}}>
       <Grid container spacing={2} height="100%">
         <Grid xs={12} md={6} sx={{alignSelf: "center"}}>
-          <Typography variant="h4" align="center" mb="0.5rem" sx={{fontWeight: "bold"}}>Damien Sedgwick</Typography>
+          <Typography variant="h4" align="center" mb="0.5rem"
+                      sx={{fontWeight: "bold"}}>Damien Sedgwick</Typography>
           <Typography variant="h1" align="center" mb="0.5rem" sx={{
             webkitTextStrokeWidth: "2px",
             webkitTextStrokeColor: "red",
@@ -33,13 +34,13 @@ export default function Home({articles}: HomeProps) {
           <List
             sx={{display: "flex", align: "center", justifyContent: "center"}}>
             <Link href="https://www.linkedin.com/in/damiensedgwick/"
-              underline="none" sx={{mx: 1}}><LinkedInIcon fontSize="large"/></Link>
+                  underline="none" sx={{mx: 1}}><LinkedInIcon fontSize="large"/></Link>
             <Link href="https://www.github.com/damiensedgwick/"
                   underline="none"
-              sx={{mx: 1}}><GitHubIcon fontSize="large"/></Link>
+                  sx={{mx: 1}}><GitHubIcon fontSize="large"/></Link>
             <Link href="https://www.twitter.com/damiensedgwick/"
                   underline="none"
-              sx={{mx: 1}}><TwitterIcon fontSize="large"/></Link>
+                  sx={{mx: 1}}><TwitterIcon fontSize="large"/></Link>
           </List>
         </Grid>
 
@@ -53,6 +54,7 @@ export default function Home({articles}: HomeProps) {
           <Typography mb="0.5rem">Recent Posts</Typography>
           {articles.map((article) => (
             <Link href={article.url}
+                  key={article.id}
                   sx={{my: 1, boxShadow: 3, borderRadius: '8px'}}>
               <Image
                 src={article.social_image} alt="Article social image"
