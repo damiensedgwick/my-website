@@ -21,8 +21,6 @@ export function Posts() {
                   title={article.title}
                   target='_blank'
                   rel='noreferrer'
-                  // @ts-ignore
-                  reloaddocument='true'
                 >
                   <img
                     src={`/social_images/${article.social_image}`}
