@@ -1,7 +1,7 @@
 import { useLoaderData } from '@remix-run/react';
 import { Article } from '~/types/articles';
 
-export function Posts() {
+export function Articles() {
   const articles = useLoaderData();
 
   return (
@@ -21,6 +21,8 @@ export function Posts() {
                   src={`/social_images/${article.social_image}`}
                   alt={article.title}
                   title={article.title}
+                  width={350}
+                  height={186}
                 />
               </a>
             </li>

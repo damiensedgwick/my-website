@@ -1,6 +1,6 @@
 import { LinksFunction, MetaFunction, json } from '@remix-run/node';
 import { Header } from '~/components/header';
-import { Posts } from '~/components/posts';
+import { Articles } from '~/components/articles';
 import { Article } from '~/types/articles';
 
 import stylesUrl from '~/styles/index.css';
@@ -42,7 +42,7 @@ export default function Index() {
   return (
     <>
       <Header />
-      <Posts />
+      <Articles />
     </>
   );
 }
