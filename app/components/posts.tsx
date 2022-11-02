@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from '@remix-run/react';
+import { useLoaderData } from '@remix-run/react';
 import { Article } from '~/types/articles';
 
 export function Posts() {
@@ -9,23 +9,30 @@ export function Posts() {
       <h2>Recent Posts</h2>
       <div>
         <ul>
-          {articles.map((article: Article) => (
-            <li key={article.title}>
-              <Link
-                to={article.url}
-                title={article.title}
-                target='_blank'
-                rel='noreferrer'
-                reloadDocument
-              >
-                <img
-                  src={`/social_images/${article.social_image}`}
-                  alt={article.title}
+          {articles.map((article: Article) => {
+            console.log(article.url);
+
+            // TODO: Links are not working correctly, remove prefix
+
+            return (
+              <li key={article.title}>
+                <a
+                  href={article.url}
                   title={article.title}
-                />
-              </Link>
-            </li>
-          ))}
+                  target='_blank'
+                  rel='noreferrer'
+                  // @ts-ignore
+                  reloaddocument='true'
+                >
+                  <img
+                    src={`/social_images/${article.social_image}`}
+                    alt={article.title}
+                    title={article.title}
+                  />
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>
