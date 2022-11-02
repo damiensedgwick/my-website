@@ -35,12 +35,10 @@ export async function loader() {
 }
 
 export default function Index() {
-  const posts = useLoaderData();
-
   return (
     <>
       <Header />
-      <Posts posts={posts} />
+      <Posts />
     </>
   );
 }
