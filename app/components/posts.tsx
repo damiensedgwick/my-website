@@ -4,7 +4,9 @@ import { Link, useLoaderData } from '@remix-run/react';
 // the resource route fetches the image and adds some cache headers
 
 export async function loader({ params }: { params: { path: string } }) {
-  const response = await fetch(params.path);
+  const response = await fetch(
+    `https://dev.to/social_previews/article/${params.path}`
+  );
 
   return new Response(response.body, {
     headers: {
