@@ -4,6 +4,7 @@ import {
   LiveReload,
   Meta,
   Outlet,
+  Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
 import globalStylesUrl from './styles/global.css';
@@ -28,6 +29,7 @@ export default function App() {
       <body>
         <Outlet />
         <ScrollRestoration />
+        <Scripts />
         <LiveReload />
       </body>
     </html>
