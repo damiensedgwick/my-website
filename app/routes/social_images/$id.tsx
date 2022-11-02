@@ -5,7 +5,7 @@ export async function loader({ params }: { params: { id: string } }) {
   );
 
   const newHeaders = new Headers(response.headers);
-  newHeaders.set('Cache-Control', 'public, max-age=259200');
+  newHeaders.set('Cache-Control', 'public, max-age=604800');
 
   return new Response(response.body, {
     headers: newHeaders,
