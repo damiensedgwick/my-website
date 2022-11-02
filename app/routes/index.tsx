@@ -1,8 +1,7 @@
 import { LinksFunction, MetaFunction, json } from '@remix-run/node';
-import { useLoaderData } from '@remix-run/react';
-import { Post } from '~/types/post';
 import { Header } from '~/components/header';
 import { Posts } from '~/components/posts';
+import { Article } from '~/types/articles';
 
 import stylesUrl from '~/styles/index.css';
 
@@ -16,19 +15,24 @@ export const meta: MetaFunction = () => ({
     'One day, I will have written, something really meaningful, and it will go here.',
 });
 
+const getArticleIdFromSocialImage = (url: string) => {
+  const [, articleId] = url.split('/article/');
+  return articleId;
+};
+
 export async function loader() {
   const res = await fetch(
     'https://dev.to/api/articles?username=damiensedgwick&per_page=3'
   );
 
-  const posts = await res.json();
+  const articles = await res.json();
 
   return json(
-    posts.map((post: Post) => {
+    articles.map((article: Article) => {
       return {
-        url: post.url,
-        title: post.title,
-        social_image: post.social_image,
+        url: article.url,
+        title: article.title,
+        social_image: getArticleIdFromSocialImage(article.social_image),
       };
     })
   );
