@@ -4,10 +4,10 @@ export async function loader({ params }: { params: { id: string } }) {
     `https://dev.to/social_previews/article/${params.id}`
   );
 
+  const newHeaders = new Headers(response.headers);
+  newHeaders.set('Cache-Control', 'public, max-age=259200');
+
   return new Response(response.body, {
-    headers: {
-      ...response.headers,
-      'Cache-Control': 'public, max-age=259200',
-    },
+    headers: newHeaders,
   });
 }
