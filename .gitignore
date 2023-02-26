@@ -44,3 +44,7 @@ yarn-error.log*
 .netlify
 public/build
 .cache
+
+# Added by cargo
+
+/target
