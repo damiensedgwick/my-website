@@ -14,10 +14,10 @@ pub fn App(cx: Scope) -> impl IntoView {
         // id=leptos means cargo-leptos will hot-reload this stylesheet
         <Stylesheet id="leptos" href="/pkg/leptos_start.css"/>
 
-        // sets the document title
-        <Title text="Welcome to Leptos"/>
+        <Title text="Damien Sedgwick | Fullstack Developer"/>
+        // TODO: Meta description text below:
+        // One day, I will have written, something really meaningful, and it will go here.
 
-        // content for this welcome page
         <Router>
             <main>
                 <Routes>
@@ -32,11 +32,22 @@ pub fn App(cx: Scope) -> impl IntoView {
 #[component]
 fn HomePage(cx: Scope) -> impl IntoView {
     // Creates a reactive value to update the button
-    let (count, set_count) = create_signal(cx, 0);
-    let on_click = move |_| set_count.update(|count| *count += 1);
+    // let (count, set_count) = create_signal(cx, 0);
+    // let on_click = move |_| set_count.update(|count| *count += 1);
 
     view! { cx,
-        <h1>"Welcome to Leptos!"</h1>
-        <button on:click=on_click>"Click Me: " {count}</button>
+        <header>
+            <h1>"Damien Sedgwick"</h1>
+            <p>"Fullstack Developer"</p>
+            <ul>
+                <li>
+                    <a href="https://github.com/damiensedgwick" title="Social link to GitHub for Damien Sedgwick" target="_blank">"Github"</a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com/in/damiensedgwick/" title="Social link to LinkedIn for Damien Sedgwick" target="_blank">"LinkedIn"</a>
+                </li>
+            </ul>
+        </header>
+        // <button on:click=on_click>"Click Me: " {count}</button>
     }
 }
