@@ -47,6 +47,7 @@ fn HomePage(cx: Scope) -> impl IntoView {
                     <a href="https://linkedin.com/in/damiensedgwick/" title="Social link to LinkedIn for Damien Sedgwick" target="_blank">"LinkedIn"</a>
                 </li>
             </ul>
+
         </header>
         // <button on:click=on_click>"Click Me: " {count}</button>
     }
