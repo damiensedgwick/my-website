@@ -15,11 +15,6 @@ export const meta: MetaFunction = () => ({
     'One day, I will have written, something really meaningful, and it will go here.',
 });
 
-const getArticleIdFromSocialImage = (url: string) => {
-  const [, articleId] = url.split('/article/');
-  return articleId;
-};
-
 export async function loader() {
   const res = await fetch(
     'https://dev.to/api/articles?username=damiensedgwick&per_page=3'
@@ -32,7 +27,7 @@ export async function loader() {
       return {
         url: article.url,
         title: article.title,
-        social_image: getArticleIdFromSocialImage(article.social_image),
+        social_image: article.social_image,
       };
     })
   );

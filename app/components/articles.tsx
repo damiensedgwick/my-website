@@ -18,7 +18,7 @@ export function Articles() {
                 rel='noreferrer'
               >
                 <img
-                  src={`/social_images/${article.social_image}`}
+                  src={article.social_image}
                   alt={article.title}
                   title={article.title}
                   width={350}
