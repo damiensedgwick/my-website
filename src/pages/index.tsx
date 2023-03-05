@@ -16,105 +16,108 @@ export default function Home({ articles }: { articles: any }) {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
-        <Grid.Container
-          gap={2}
-          justify='center'
-          alignItems='center'
-          css={{ height: '100%' }}
-        >
-          <Grid xs={12} sm={6} direction='column'>
-            <Text
-              h1
-              weight='bold'
-              css={{
-                fontSize: '2rem',
-                margin: '0',
-                textTransform: 'uppercase',
-                letterSpacing: '1px',
-                textAlign: 'center',
+        <Text h1 css={{ color: '$teal-500', textAlign: 'center' }}>
+          Testing
+        </Text>
+        {/*<Grid.Container*/}
+        {/*  gap={2}*/}
+        {/*  justify='center'*/}
+        {/*  alignItems='center'*/}
+        {/*  css={{ height: '100%' }}*/}
+        {/*>*/}
+        {/*  <Grid xs={12} sm={6} direction='column'>*/}
+        {/*    <Text*/}
+        {/*      h1*/}
+        {/*      weight='bold'*/}
+        {/*      css={{*/}
+        {/*        fontSize: '2rem',*/}
+        {/*        margin: '0',*/}
+        {/*        textTransform: 'uppercase',*/}
+        {/*        letterSpacing: '1px',*/}
+        {/*        textAlign: 'center',*/}
 
-                '@media (min-width: 768px)': {
-                  fontSize: '2.5rem',
-                },
+        {/*        '@media (min-width: 768px)': {*/}
+        {/*          fontSize: '2.5rem',*/}
+        {/*        },*/}
 
-                '@media (min-width: 960px)': {
-                  textAlign: 'left',
-                },
+        {/*        '@media (min-width: 960px)': {*/}
+        {/*          textAlign: 'left',*/}
+        {/*        },*/}
 
-                '@media (min-width: 1200px)': {
-                  fontSize: '3.5rem',
-                },
-              }}
-            >
-              Damien Sedgwick
-            </Text>
-            <Text
-              css={{
-                fontSize: '2rem',
-                color: '#ECEDEE',
-                fontFamily: 'Arial',
-                '-webkit-text-stroke-width': '1px',
-                '-webkit-text-stroke-color': '#10253E',
-                letterSpacing: '0.25rem',
-                filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
-                textAlign: 'center',
+        {/*        '@media (min-width: 1200px)': {*/}
+        {/*          fontSize: '3.5rem',*/}
+        {/*        },*/}
+        {/*      }}*/}
+        {/*    >*/}
+        {/*      Damien Sedgwick*/}
+        {/*    </Text>*/}
+        {/*    <Text*/}
+        {/*      css={{*/}
+        {/*        fontSize: '2rem',*/}
+        {/*        color: '#ECEDEE',*/}
+        {/*        fontFamily: 'Arial',*/}
+        {/*        '-webkit-text-stroke-width': '1px',*/}
+        {/*        '-webkit-text-stroke-color': '#10253E',*/}
+        {/*        letterSpacing: '0.25rem',*/}
+        {/*        filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',*/}
+        {/*        textAlign: 'center',*/}
 
-                '@media (min-width: 768px)': {
-                  fontSize: '2.5rem',
-                },
+        {/*        '@media (min-width: 768px)': {*/}
+        {/*          fontSize: '2.5rem',*/}
+        {/*        },*/}
 
-                '@media (min-width: 960px)': {
-                  textAlign: 'left',
-                },
+        {/*        '@media (min-width: 960px)': {*/}
+        {/*          textAlign: 'left',*/}
+        {/*        },*/}
 
-                '@media (min-width: 1200px)': {
-                  fontSize: '3.5rem',
-                },
-              }}
-              weight='bold'
-            >
-              Fullstack Engineer
-            </Text>
-          </Grid>
-          <Grid xs={12} sm={5}>
-            <Container justify='center' alignItems='center'>
-              <Text
-                h2
-                weight='bold'
-                css={{ fontSize: '2rem', textAlign: 'center' }}
-              >
-                Recent Posts
-              </Text>
-              {articles.map((article: any) => (
-                <Link href={article.url} target='_blank' key={article.id}>
-                  <Card
-                    css={{
-                      margin: '1rem auto',
-                      boxShadow: '0 25px 50px -12px rgb(0 0 0 / 0.5)',
-                      width: '262px',
-                      height: '138px',
+        {/*        '@media (min-width: 1200px)': {*/}
+        {/*          fontSize: '3.5rem',*/}
+        {/*        },*/}
+        {/*      }}*/}
+        {/*      weight='bold'*/}
+        {/*    >*/}
+        {/*      Fullstack Engineer*/}
+        {/*    </Text>*/}
+        {/*  </Grid>*/}
+        {/*  <Grid xs={12} sm={5}>*/}
+        {/*    <Container justify='center' alignItems='center'>*/}
+        {/*      <Text*/}
+        {/*        h2*/}
+        {/*        weight='bold'*/}
+        {/*        css={{ fontSize: '2rem', textAlign: 'center' }}*/}
+        {/*      >*/}
+        {/*        Recent Posts*/}
+        {/*      </Text>*/}
+        {/*      {articles.map((article: any) => (*/}
+        {/*        <Link href={article.url} target='_blank' key={article.id}>*/}
+        {/*          <Card*/}
+        {/*            css={{*/}
+        {/*              margin: '1rem auto',*/}
+        {/*              boxShadow: '0 25px 50px -12px rgb(0 0 0 / 0.5)',*/}
+        {/*              width: '262px',*/}
+        {/*              height: '138px',*/}
 
-                      '&:hover': {
-                        transform: 'scale(1.05)',
-                      },
+        {/*              '&:hover': {*/}
+        {/*                transform: 'scale(1.05)',*/}
+        {/*              },*/}
 
-                      '@media (min-width: 960px)': {
-                        width: '300px',
-                        height: '160px',
-                      },
-                    }}
-                  >
-                    <Image
-                      src={article.social_image}
-                      alt='Block post social image'
-                      fill
-                    />
-                  </Card>
-                </Link>
-              ))}
-            </Container>
-          </Grid>
-        </Grid.Container>
+        {/*              '@media (min-width: 960px)': {*/}
+        {/*                width: '300px',*/}
+        {/*                height: '160px',*/}
+        {/*              },*/}
+        {/*            }}*/}
+        {/*          >*/}
+        {/*            <Image*/}
+        {/*              src={article.social_image}*/}
+        {/*              alt='Block post social image'*/}
+        {/*              fill*/}
+        {/*            />*/}
+        {/*          </Card>*/}
+        {/*        </Link>*/}
+        {/*      ))}*/}
+        {/*    </Container>*/}
+        {/*  </Grid>*/}
+        {/*</Grid.Container>*/}
       </main>
     </>
   );
