@@ -22,7 +22,7 @@ export default function Home({ articles }: { articles: any }) {
           alignItems='center'
           css={{ height: '100%' }}
         >
-          <Grid xs={12} sm={5} direction='column'>
+          <Grid xs={12} sm={6} direction='column'>
             <Text
               h1
               weight='bold'
@@ -33,8 +33,16 @@ export default function Home({ articles }: { articles: any }) {
                 letterSpacing: '1px',
                 textAlign: 'center',
 
-                '@media (min-width: 992px)': {
+                '@media (min-width: 768px)': {
+                  fontSize: '2.5rem',
+                },
+
+                '@media (min-width: 960px)': {
                   textAlign: 'left',
+                },
+
+                '@media (min-width: 1200px)': {
+                  fontSize: '3.5rem',
                 },
               }}
             >
@@ -51,8 +59,16 @@ export default function Home({ articles }: { articles: any }) {
                 filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
                 textAlign: 'center',
 
-                '@media (min-width: 992px)': {
+                '@media (min-width: 768px)': {
+                  fontSize: '2.5rem',
+                },
+
+                '@media (min-width: 960px)': {
                   textAlign: 'left',
+                },
+
+                '@media (min-width: 1200px)': {
+                  fontSize: '3.5rem',
                 },
               }}
               weight='bold'
@@ -70,9 +86,8 @@ export default function Home({ articles }: { articles: any }) {
                 Recent Posts
               </Text>
               {articles.map((article: any) => (
-                <Link href={article.url} target='_blank'>
+                <Link href={article.url} target='_blank' key={article.id}>
                   <Card
-                    key={article.id}
                     css={{
                       margin: '1rem auto',
                       boxShadow: '0 25px 50px -12px rgb(0 0 0 / 0.5)',
@@ -83,9 +98,9 @@ export default function Home({ articles }: { articles: any }) {
                         transform: 'scale(1.05)',
                       },
 
-                      '@media (min-width: 992px)': {
-                        width: '350px',
-                        height: '185px',
+                      '@media (min-width: 960px)': {
+                        width: '300px',
+                        height: '160px',
                       },
                     }}
                   >
