@@ -1,19 +1,9 @@
 import Head from 'next/head';
+import Link from 'next/link';
+import Image from 'next/image';
 import { Container, Grid, Text, Card } from '@nextui-org/react';
 
-export default function Home() {
-  const MockItem = ({ text }: { text: string }) => {
-    return (
-      <Card css={{ h: '$24', $$cardColor: '$colors$primary' }}>
-        <Card.Body>
-          <Text h6 size={15} color='white' css={{ mt: 0 }}>
-            {text}
-          </Text>
-        </Card.Body>
-      </Card>
-    );
-  };
-
+export default function Home({ articles }: { articles: any }) {
   return (
     <>
       <Head>
@@ -26,22 +16,44 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
-        <Grid.Container gap={2} justify='center' alignItems='center'>
-          <Grid xs={12} sm={5} direction='column' alignItems='center'>
+        <Grid.Container
+          gap={2}
+          justify='center'
+          alignItems='center'
+          css={{ height: '100%' }}
+        >
+          <Grid xs={12} sm={5} direction='column'>
             <Text
               h1
-              size={45}
-              css={{
-                textGradient: '45deg, $blue600 -20%, $pink600 50%',
-              }}
               weight='bold'
+              css={{
+                fontSize: '2rem',
+                margin: '0',
+                textTransform: 'uppercase',
+                letterSpacing: '1px',
+                textAlign: 'center',
+
+                '@media (min-width: 992px)': {
+                  textAlign: 'left',
+                },
+              }}
             >
               Damien Sedgwick
             </Text>
             <Text
-              size={45}
               css={{
-                textGradient: '45deg, $purple600 -20%, $pink600 100%',
+                fontSize: '2rem',
+                color: '#ECEDEE',
+                fontFamily: 'Arial',
+                '-webkit-text-stroke-width': '1px',
+                '-webkit-text-stroke-color': '#10253E',
+                letterSpacing: '0.25rem',
+                filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
+                textAlign: 'center',
+
+                '@media (min-width: 992px)': {
+                  textAlign: 'left',
+                },
               }}
               weight='bold'
             >
@@ -49,10 +61,58 @@ export default function Home() {
             </Text>
           </Grid>
           <Grid xs={12} sm={5}>
-            <MockItem text='2 of 2' />
+            <Container justify='center' alignItems='center'>
+              <Text
+                h2
+                weight='bold'
+                css={{ fontSize: '2rem', textAlign: 'center' }}
+              >
+                Recent Posts
+              </Text>
+              {articles.map((article: any) => (
+                <Link href={article.url} target='_blank'>
+                  <Card
+                    key={article.id}
+                    css={{
+                      margin: '1rem auto',
+                      boxShadow: '0 25px 50px -12px rgb(0 0 0 / 0.5)',
+                      width: '262px',
+                      height: '138px',
+
+                      '&:hover': {
+                        transform: 'scale(1.05)',
+                      },
+
+                      '@media (min-width: 992px)': {
+                        width: '350px',
+                        height: '185px',
+                      },
+                    }}
+                  >
+                    <Image
+                      src={article.social_image}
+                      alt='Block post social image'
+                      fill
+                    />
+                  </Card>
+                </Link>
+              ))}
+            </Container>
           </Grid>
         </Grid.Container>
       </main>
     </>
   );
+}
+
+export async function getServerSideProps() {
+  const res = await fetch(
+    'https://dev.to/api/articles?username=damiensedgwick&per_page=3'
+  );
+
+  const articles = await res.json();
+
+  return {
+    props: { articles },
+  };
 }
