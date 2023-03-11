@@ -12,7 +12,7 @@ export default async function Posts() {
 
   return (
     <div className={styles.grid}>
-      <div className={styles.container}>
+      <div className={styles.articlesWrapper}>
         <Articles articles={articles} />
       </div>
       <AppBar />
