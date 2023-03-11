@@ -1,0 +1,58 @@
+.container {
+    position: fixed;
+    width: 100%;
+    padding: 1rem 0.5rem;
+    bottom: 0;
+    color: #1f2937;
+    /*box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;*/
+    /*box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0, rgba(255, 255, 255, 0.8) -6px -2px 16px 0;*/
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.nav {
+    /*color: red;*/
+}
+
+.navMenu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navItem {
+    width: 100%;
+    border-right: solid 1px white;
+}
+
+.navItem:last-child {
+    border-right: none;
+}
+
+.navLink {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.navIcon {
+    color: inherit;
+    font-size: 1.5rem;
+    margin: 0 0 0.25rem 0;
+}
+
+.navText {
+    color: inherit;
+    font-size: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 400px;
+        margin: 0 0 1rem 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 12px;
+    }
+}
