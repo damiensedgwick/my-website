@@ -1,3 +1,5 @@
+
+
 *,
 *::before,
 *::after {
@@ -50,8 +52,8 @@ object {
     vertical-align: middle;
 }
 
-hmtl, body {
+html, body {
     height: 100%;
     width: 100%;
-   font-family: Monaco, monospace;
+    font-family: Arial
 }

@@ -1,0 +1,117 @@
+.grid {
+    height: calc(100% - 75px);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 0.25rem;
+}
+
+.header {
+    grid-row: 2 / 3;
+    grid-column:  1 / span 12;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: clamp(1.5rem, 3rem, max(1rem, 5vw));
+    letter-spacing: 0.15rem;
+    font-weight: 500;
+}
+
+.subtitle {
+    margin: 1rem 0;
+    font-size: clamp(2rem, 3.5rem, max(1rem, 5vw));
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    letter-spacing: 0.25rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.socialLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin: 0 0.4rem;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    color: #1f2937;
+    transition: transform 0.2s ease-in-out;
+}
+
+.socialLink:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.articlesWrapper {
+    grid-row: 3 / 4;
+    grid-column:  1 / span 12;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+/*.articlesWrapper {*/
+/*    grid-row: 3 / 4;*/
+/*    grid-column:  1 / span 12;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    padding: 1rem;*/
+/*}*/
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .header {
+        grid-row: 4 / 6;
+        grid-column:  2 / span 6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    /*.articlesWrapper {*/
+    /*    grid-row: 4 / 4;*/
+    /*    grid-column:  9 / span 4;*/
+    /*    display: flex;*/
+    /*    flex-direction: column;*/
+    /*    justify-content: center;*/
+    /*    align-items: center;*/
+    /*    padding: 1rem;*/
+    /*}*/
+}
+
+@media (min-width: 1280px) {
+    .header {
+        grid-column: 3 / span 6;
+    }
+
+    /*.articlesWrapper {*/
+    /*    grid-column:  8 / span 4;*/
+    /*}*/
+}
