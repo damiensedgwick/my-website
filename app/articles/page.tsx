@@ -13,6 +13,7 @@ export default async function Posts() {
 
   return (
     <div className={styles.grid}>
+      <h2 className={styles.articlesTitle}>All Articles</h2>
       <ul className={styles.articles}>
         <Articles articles={articles} />
       </ul>

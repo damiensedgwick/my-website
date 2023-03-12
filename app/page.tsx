@@ -44,7 +44,7 @@ export default async function Home() {
       </header>
 
       <div className={styles.articlesContainer}>
-        <h2>Recent Articles</h2>
+        <h2 className={styles.articlesTitle}>Recent Articles</h2>
         <ul className={styles.articles}>
           <Articles articles={articles} />
         </ul>
