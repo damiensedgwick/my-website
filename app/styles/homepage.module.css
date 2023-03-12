@@ -49,14 +49,14 @@
     margin: 0 0.4rem;
     border-radius: 50%;
     background-color: white;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
     text-decoration: none;
     color: #1f2937;
-    transition: transform 0.2s ease-in-out;
 }
 
 .socialLink:hover {
-    transform: scale(1.1);
+    color: #14b8a6;
+    transform: scale(1.05);
     transition: transform 0.2s ease-in-out;
 }
 

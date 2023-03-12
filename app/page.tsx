@@ -24,8 +24,9 @@ export default async function Home() {
               href='https://github.com/damiensedgwick'
               target='_blank'
               rel='noopener'
+              title="Damien's Github"
             >
-              <RiGithubFill />
+              <RiGithubFill name="Damien's Github" />
             </a>
           </li>
           <li>
@@ -34,8 +35,9 @@ export default async function Home() {
               href='https://www.linkedin.com/in/damiensedgwick/'
               target='_blank'
               rel='noopener'
+              title="Damien's LinkedIn"
             >
-              <RiLinkedinFill />
+              <RiLinkedinFill name="Damien's LinkedIn" />
             </a>
           </li>
         </ul>
