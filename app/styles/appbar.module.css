@@ -5,12 +5,8 @@
     bottom: 0;
     color: #1f2937;
     background-color: white;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0 4px 8px -2px, rgba(9, 30, 66, 0.08) 0 0 0 1px;
     z-index: 100;
-}
-
-.nav {
-    /*color: red;*/
 }
 
 .navMenu {
@@ -21,6 +17,13 @@
 .navItem {
     width: 100%;
     border-right: solid 1px white;
+    transition: transform 0.2s ease-in-out;
+}
+
+.navItem:hover {
+    width: 100%;
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
 }
 
 .navItemActive {

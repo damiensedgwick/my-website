@@ -1,6 +1,7 @@
 import { AppBar } from './components/AppBar';
 import { RiGithubFill, RiLinkedinFill } from 'react-icons/ri';
 import { Articles } from '@/app/components/Articles';
+import { Article } from '@/app/types/article';
 
 import styles from '@/app/styles/homepage.module.css';
 
@@ -9,7 +10,7 @@ export default async function Home() {
     'https://dev.to/api/articles?username=damiensedgwick&per_page=3'
   );
 
-  const articles = await res.json();
+  const articles: Article[] = await res.json();
 
   return (
     <div className={styles.grid}>
@@ -40,7 +41,7 @@ export default async function Home() {
         </ul>
       </header>
 
-      <div className={styles.articlesWrapper}>
+      <div className={styles.articlesContainer}>
         <h2>Recent Articles</h2>
         <Articles articles={articles} />
       </div>
