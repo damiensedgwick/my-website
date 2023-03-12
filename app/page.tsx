@@ -43,7 +43,9 @@ export default async function Home() {
 
       <div className={styles.articlesContainer}>
         <h2>Recent Articles</h2>
-        <Articles articles={articles} />
+        <ul className={styles.articles}>
+          <Articles articles={articles} />
+        </ul>
       </div>
 
       <AppBar />

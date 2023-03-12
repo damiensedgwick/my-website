@@ -13,9 +13,9 @@ export default async function Posts() {
 
   return (
     <div className={styles.grid}>
-      <div className={styles.articlesContainer}>
+      <ul className={styles.articles}>
         <Articles articles={articles} />
-      </div>
+      </ul>
 
       <AppBar />
     </div>

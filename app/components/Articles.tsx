@@ -5,7 +5,7 @@ import styles from '@/app/styles/articles.module.css';
 
 export const Articles = ({ articles }: { articles: Article[] }) => {
   return (
-    <ul className={styles.articles}>
+    <>
       {articles.map((article) => (
         <li key={article.id} className={styles.article}>
           <article>
@@ -18,6 +18,6 @@ export const Articles = ({ articles }: { articles: Article[] }) => {
           </article>
         </li>
       ))}
-    </ul>
+    </>
   );
 };
