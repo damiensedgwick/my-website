@@ -54,12 +54,6 @@
     color: #1f2937;
 }
 
-.socialLink:hover {
-    color: #14b8a6;
-    transform: scale(1.05);
-    transition: transform 0.2s ease-in-out;
-}
-
 .articlesContainer {
     padding: 1rem;
     grid-row: 3 / span 7;
@@ -108,5 +102,13 @@
 @media (min-width: 1280px) {
     .header {
         grid-row: 4 / span 6;
+    }
+}
+
+@media (hover: hover) {
+    .socialLink:hover {
+        color: #14b8a6;
+        transform: scale(1.05);
+        transition: transform 0.2s ease-in-out;
     }
 }

@@ -20,7 +20,7 @@ export const AppBar = () => {
           <li
             className={pathname === '/' ? styles.navItemActive : styles.navItem}
           >
-            <Link className={styles.navLink} href='/'>
+            <Link className={styles.navLink} href='/' title='Home'>
               <RiHome4Line className={styles.navIcon} />
               <span className={styles.navText}>Home</span>
             </Link>
@@ -40,7 +40,7 @@ export const AppBar = () => {
               pathname === '/articles' ? styles.navItemActive : styles.navItem
             }
           >
-            <Link className={styles.navLink} href='/articles'>
+            <Link className={styles.navLink} href='/articles' title='Articles'>
               <RiPagesLine className={styles.navIcon} />
               <span className={styles.navText}>Articles</span>
             </Link>

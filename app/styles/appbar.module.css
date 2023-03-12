@@ -18,18 +18,12 @@
     width: 100%;
     border-right: solid 1px white;
     transition: transform 0.2s ease-in-out;
-}
-
-.navItem:hover {
-    width: 100%;
-    transform: scale(1.05);
-    transition: transform 0.2s ease-in-out;
+    opacity: 0.75;
 }
 
 .navItemActive {
     width: 100%;
     border-right: solid 1px white;
-    color: #14b8a6;
 }
 
 .navItem:last-child {
@@ -63,5 +57,14 @@
         left: 50%;
         transform: translateX(-50%);
         border-radius: 12px;
+    }
+}
+
+
+@media (hover: hover) {
+    .navItem:hover {
+        width: 100%;
+        color: #14b8a6;
+        opacity: 1;
     }
 }
