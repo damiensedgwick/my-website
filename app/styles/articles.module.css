@@ -1,0 +1,21 @@
+.article {
+    position: relative;
+    aspect-ratio: 16/9;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    margin: 0.25rem;
+}
+
+@media (hover: hover) {
+    .article:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s ease-in-out;
+        z-index: 100;
+    }
+}
+
+
+.articleImage {
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px;
+}
