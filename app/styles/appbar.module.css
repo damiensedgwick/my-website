@@ -5,7 +5,7 @@
     bottom: 0;
     color: #1f2937;
     background-color: white;
-    box-shadow: rgba(9, 30, 66, 0.25) 0 4px 8px -2px, rgba(9, 30, 66, 0.08) 0 0 0 1px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
     z-index: 100;
 }
 
@@ -58,7 +58,7 @@
 
 @media (min-width: 768px) {
     .container {
-        max-width: 400px;
+        max-width: 200px;
         margin: 0 0 1rem 0;
         left: 50%;
         transform: translateX(-50%);
