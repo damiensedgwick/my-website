@@ -4,6 +4,7 @@ import { Articles } from '@/app/components/Articles';
 import { Article } from '@/app/types/article';
 
 import styles from '@/app/styles/homepage.module.css';
+import { NameTitle } from '@/app/components/NameTitle';
 
 export default async function Home() {
   const res = await fetch(
@@ -15,7 +16,7 @@ export default async function Home() {
   return (
     <div className={styles.grid}>
       <header className={styles.header}>
-        <h1 className={styles.title}>Damien Sedgwick</h1>
+        <NameTitle />
         <p className={styles.subtitle}>Fullstack Engineer</p>
         <ul className={styles.socialLinks}>
           <li className={styles.socialLinkItem}>

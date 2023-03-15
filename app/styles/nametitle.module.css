@@ -1,0 +1,6 @@
+.title {
+    text-transform: uppercase;
+    font-size: clamp(1.5rem, 2.75rem, max(1rem, 5vw));
+    letter-spacing: 0.15rem;
+    font-weight: 500;
+}
