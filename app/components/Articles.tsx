@@ -8,14 +8,19 @@ export const Articles = ({ articles }: { articles: Article[] }) => {
     <>
       {articles.map((article) => (
         <li key={article.id} className={styles.article}>
-          <article>
+          <a
+            href={article.url}
+            title={article.title}
+            target='_blank'
+            rel='noopener'
+          >
             <Image
               className={styles.articleImage}
               src={article.social_image}
               alt={article.title}
               fill
             />
-          </article>
+          </a>
         </li>
       ))}
     </>
