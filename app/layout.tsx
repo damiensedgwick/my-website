@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 import './styles/globals.css';
+import { AppBar } from '@/app/components/appbar/AppBar';
 
 export const metadata = {
   title: 'Damien Sedgwick | Software Engineer',
@@ -11,7 +12,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang='en'>
-      <body>{children}</body>
+      <body>
+        {children}
+        <AppBar />
+      </body>
     </html>
   );
 }

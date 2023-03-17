@@ -1,4 +1,4 @@
-import { AppBar } from '../components/AppBar';
+import { AppBar } from '@/app/components/appbar/AppBar';
 
 export default function Contact() {
   return (
@@ -11,7 +11,6 @@ export default function Contact() {
         style={{ display: 'block', margin: 'auto' }}
       />
       <h2 style={{ textAlign: 'center', marginTop: '1rem' }}>Coming Soon</h2>
-      <AppBar />
     </main>
   );
 }

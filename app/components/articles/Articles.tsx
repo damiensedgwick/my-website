@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Article } from '@/app/types/article';
 
-import styles from '@/app/styles/articles.module.css';
+import styles from '@/app/components/articles/articles.module.css';
 
 export const Articles = ({ articles }: { articles: Article[] }) => {
   return (

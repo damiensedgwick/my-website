@@ -1,8 +1,8 @@
-import { AppBar } from '../components/AppBar';
-import { Articles } from '@/app/components/Articles';
+import { AppBar } from '@/app/components/appbar/AppBar';
+import { Articles } from '@/app/components/articles/Articles';
 import { Article } from '@/app/types/article';
 
-import styles from '../styles/articlespage.module.css';
+import styles from './page.module.css';
 
 export default async function Posts() {
   const res = await fetch(
@@ -17,8 +17,6 @@ export default async function Posts() {
       <ul className={styles.articles}>
         <Articles articles={articles} />
       </ul>
-
-      <AppBar />
     </div>
   );
 }

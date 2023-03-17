@@ -3,12 +3,12 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
   RiHome4Line,
+  RiInformationLine,
   // RiMailLine,
   RiPagesLine,
-  // RiInformationLine,
 } from 'react-icons/ri';
 
-import styles from '../styles/appbar.module.css';
+import styles from './appbar.module.css';
 
 export const AppBar = () => {
   const pathname = usePathname();
@@ -25,16 +25,16 @@ export const AppBar = () => {
               <span className={styles.navText}>Home</span>
             </Link>
           </li>
-          {/*<li*/}
-          {/*  className={*/}
-          {/*    pathname === '/about' ? styles.navItemActive : styles.navItem*/}
-          {/*  }*/}
-          {/*>*/}
-          {/*  <Link className={styles.navLink} href='/about'>*/}
-          {/*    <RiInformationLine className={styles.navIcon} />*/}
-          {/*    <span className={styles.navText}>About</span>*/}
-          {/*  </Link>*/}
-          {/*</li>*/}
+          <li
+            className={
+              pathname === '/about' ? styles.navItemActive : styles.navItem
+            }
+          >
+            <Link className={styles.navLink} href='/about'>
+              <RiInformationLine className={styles.navIcon} />
+              <span className={styles.navText}>About</span>
+            </Link>
+          </li>
           <li
             className={
               pathname === '/articles' ? styles.navItemActive : styles.navItem

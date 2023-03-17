@@ -1,6 +1,6 @@
-import { AppBar } from './components/AppBar';
 import { RiGithubFill, RiLinkedinFill } from 'react-icons/ri';
-import { Articles } from '@/app/components/Articles';
+import { AppBar } from '@/app/components/appbar/AppBar';
+import { Articles } from '@/app/components/articles/Articles';
 import { Article } from '@/app/types/article';
 
 import styles from '@/app/styles/homepage.module.css';
@@ -49,8 +49,6 @@ export default async function Home() {
           <Articles articles={articles} />
         </ul>
       </div>
-
-      <AppBar />
     </div>
   );
 }
