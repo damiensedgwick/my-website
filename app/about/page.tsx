@@ -19,7 +19,7 @@ export default function About() {
         </p>
         <p className={styles.content}>
           I also enjoy contributing to open source software when I get some
-          spare time. Below is a small collection of the projects that I've
+          spare time, below is a small collection of the projects that I've
           contributed to so far and as you may have already seen, I also like to
           post articles on{' '}
           <a
