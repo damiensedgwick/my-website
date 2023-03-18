@@ -60,6 +60,22 @@
     }
 }
 
+@media (min-width: 2400px) {
+    .container {
+        max-width: 800px;
+        margin: 0 0 1rem 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 12px;
+    }
+
+    .navIcon {
+        color: inherit;
+        font-size: 2rem;
+        margin: 0 0 0.5rem 0;
+    }
+}
+
 
 @media (hover: hover) {
     .navItem:hover {

@@ -117,6 +117,32 @@
     }
 }
 
+@media (min-width: 2400px) {
+    .title {
+       font-size: 5rem;
+    }
+
+    .subtitle {
+       font-size: 5rem;
+    }
+
+    .socialLink {
+        font-size: 2rem;
+        width: 3.75rem;
+        height: 3.75rem;
+        margin: 0 0.8rem;
+    }
+
+    .articlesContainer {
+        grid-row: 2 / span 2;
+    }
+
+    .articles {
+        width: 75%;
+    }
+}
+
+
 @media (hover: hover) {
     .socialLink:hover {
         color: #14b8a6;
