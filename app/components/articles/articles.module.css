@@ -4,6 +4,7 @@
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
     margin: 0.25rem;
+    max-width: 400px;
 }
 
 @media (hover: hover) {

@@ -12,8 +12,7 @@
 }
 
 .title {
-    max-width: 80ch;
-    font-size: clamp(1.5rem, 2.25rem, max(1rem, 5vw));
+    font-size: clamp(1.5rem, 2rem, max(1rem, 5vw));
     margin: 0 0 1rem 0;
     border-bottom: solid 4px #14b8a6;
     width: fit-content;

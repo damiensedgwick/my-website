@@ -17,14 +17,14 @@
 
 .title {
     text-transform: uppercase;
-    font-size: clamp(1.5rem, 2.75rem, max(1rem, 5vw));
+    font-size: clamp(1.5rem, 3rem, max(1rem, 5vw));
     letter-spacing: 0.15rem;
     font-weight: 500;
 }
 
 .subtitle {
     margin: 1rem 0;
-    font-size: clamp(2rem, 3rem, max(1rem, 5vw));
+    font-size: clamp(2rem, 3.5rem, max(1rem, 5vw));
     color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
@@ -54,8 +54,11 @@
 }
 
 .articlesTitle {
-    font-size: 1.25rem;
-    margin: 1rem 0;
+    font-size: clamp(1.5rem, 2rem, max(1rem, 5vw));
+    margin: 0 0 1rem 0;
+    border-bottom: solid 4px #14b8a6;
+    width: fit-content;
+    font-weight: 600;
 }
 
 .articlesContainer {
@@ -69,7 +72,7 @@
 
 .articles {
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -95,10 +98,6 @@
         grid-column: 8 / span 4;
     }
 
-    .articles {
-        max-width: inherit;
-    }
-
     .articles > li:last-child {
         margin-bottom: 0;
     }
@@ -113,7 +112,7 @@
 
 @media (min-width: 1536px) {
     .articlesContainer {
-        grid-row: 1 / span 4;
+        grid-row: 2 / span 2;
     }
 }
 
@@ -135,10 +134,6 @@
 
     .articlesContainer {
         grid-row: 2 / span 2;
-    }
-
-    .articles {
-        width: 75%;
     }
 }
 
