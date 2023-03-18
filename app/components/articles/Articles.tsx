@@ -9,6 +9,7 @@ export const Articles = ({ articles }: { articles: Article[] }) => {
       {articles.map((article) => (
         <li key={article.id} className={styles.article}>
           <a
+            className={styles.articleLink}
             href={article.url}
             title={article.title}
             target='_blank'
