@@ -10,6 +10,8 @@ export default async function Posts() {
 
   const articles: Article[] = await res.json();
 
+  // force a build
+
   return (
     <>
       <h2 className={styles.articlesTitle}>All Articles</h2>
