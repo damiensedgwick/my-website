@@ -1,0 +1,17 @@
+{{template "base.html" .}}
+
+{{define "content"}}
+
+<section class="about">
+    {{block "about" .}}{{end}}
+</section>
+
+<section class="oss">
+    {{block "oss" .}}{{end}}
+</section>
+
+<section class="articles">
+    {{block "articles" .}}{{end}}
+</section>
+
+{{end}}
