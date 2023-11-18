@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for my-website-rough-waterfall-805 on 2023-11-17T15:01:28Z
+# fly.toml app configuration file generated for my-website on 2023-11-18T23:06:39Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "my-website-rough-waterfall-805"
+app = "my-website"
 primary_region = "lhr"
 
 [build]
