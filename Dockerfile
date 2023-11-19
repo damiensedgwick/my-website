@@ -1,11 +1,14 @@
-FROM golang:1.21.4-alpine3.17
+# Use the official Alpine image as the base image
+FROM alpine:latest
 
-COPY . /app
-
+# Set the working directory inside the container
 WORKDIR /app
 
-RUN go build cmd/main.go
+# Copy the pre-built binary into the container
+COPY build/my-website-linux /app/my-website
 
+# Expose port 8080 to run the application
 EXPOSE 8080
 
-CMD ["/app/main"]
+# Command to run the application
+CMD ["./my-website"]
