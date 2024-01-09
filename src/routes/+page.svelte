@@ -11,6 +11,14 @@
   };
 </script>
 
+<svelte:head>
+  <title>Damien Sedgwick | Fullstack Engineer | Founder</title>
+  <meta
+    name="description"
+    content="Damien Sedgwick is a fullstack engineer and founder of Floop, the easy to user feedback loop for platform providers."
+  />
+</svelte:head>
+
 <div class="relative h-full flex flex-col justify-center items-center p-2">
   <section class="glowing-bg" />
 
