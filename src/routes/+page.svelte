@@ -20,7 +20,7 @@
   <section class="glowing-bg" />
 
   <a
-    class="absolute bottom-4 right-4 hover:rotate-12 transition-all"
+    class="absolute bottom-6 right-6 hover:rotate-12 transition-all hover:scale-125"
     href="https://www.feedback-loop.io"
     target="_blank"
     rel="noopener norefer"
@@ -58,7 +58,7 @@
 
   @keyframes pulse {
     50% {
-      transform: scale(1.25);
+      transform: scale(2);
     }
   }
 </style>
