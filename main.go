@@ -14,10 +14,14 @@ var static embed.FS
 //go:embed templates
 var templates embed.FS
 
+//go:embed robots.txt
+var robotsTxt []byte
+
 func main() {
 	http.Handle("/static/", http.FileServer(http.FS(static)))
 
 	http.HandleFunc("/", handler)
+	http.HandleFunc("/robots.txt", robots)
 
 	fmt.Println("Server is running at http://localhost:8080")
 	if err := http.ListenAndServe(":8080", nil); err != nil {
@@ -31,4 +35,9 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	if err := t.Execute(w, nil); err != nil {
 		log.Fatal(err)
 	}
+}
+
+func robots(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "text/plain")
+	w.Write(robotsTxt)
 }
