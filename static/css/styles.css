@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/Nunito-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito-Light";
+  src: url("../fonts/Nunito-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito-SemiBold";
+  src: url("../fonts/Nunito-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito-Bold";
+  src: url("../fonts/Nunito-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito-Black";
+  src: url("../fonts/Nunito-Black.ttf") format("truetype");
+}
+
+:root {
+  --bg-primary: #facc15;
+
+  --text-primary: #000000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Nunito";
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 16px;
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  max-height: 700px;
+}
+
+.content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 325px;
+}
+
+.name {
+  font-family: "Nunito-Bold";
+  font-size: 39px;
+}
+
+.tagline {
+  font-size: 17px;
+  font-family: "Nunito-Black";
+}
+
+.greeting,
+.bio {
+  font-size: 18px;
+}
+
+.floop-dash {
+  max-width: 325px;
+  border: solid 8px #9f7f00;
+  border-radius: 20px;
+  -webkit-box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.7);
+}
+
+.floop-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  gap: 5px;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: bold;
+}
+
+.floop-link > svg {
+  height: 30px;
+  width: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    max-height: 800px;
+  }
+
+  .content-text,
+  .floop-dash {
+    max-width: 625px;
+  }
+
+  .name {
+    font-size: 55px;
+  }
+
+  .tagline {
+    font-size: 24px;
+  }
+
+  .greeting,
+  .bio {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .content {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1560px) {
+  .floop-dash {
+    max-width: 900px;
+  }
+}
