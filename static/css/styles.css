@@ -99,11 +99,11 @@ body {
 .floop-dash {
   height: auto;
   max-width: 325px;
-  /* border: solid 2px #9f7f00; */
-  /* border-radius: 20px; */
-  /* -webkit-box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.7); */
-  /* box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.7); */
-  /* backdrop-filter: blur(4px); */
+  border: solid 8px #9f7f00;
+  border-radius: 20px;
+  -webkit-box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
 }
 
 .dashed-line {
@@ -118,6 +118,7 @@ body {
 .floop-link {
   width: 80px;
   margin-top: 5px;
+  margin-right: 15px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -132,7 +133,7 @@ body {
 
 @media (hover: hover) {
   .floop-link:hover {
-    transform: translate(10px);
+    transform: translate(20px);
     transition: 250ms;
   }
 }
