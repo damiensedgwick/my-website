@@ -96,6 +96,16 @@ body {
   z-index: 999;
 }
 
+.floop-dash {
+  height: auto;
+  max-width: 325px;
+  /* border: solid 2px #9f7f00; */
+  /* border-radius: 20px; */
+  /* -webkit-box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.7); */
+  /* box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.7); */
+  /* backdrop-filter: blur(4px); */
+}
+
 .dashed-line {
   display: block;
   position: absolute;
@@ -103,14 +113,6 @@ body {
   overflow-x: hidden;
   bottom: 50%;
   z-index: -1;
-}
-
-.floop-dash {
-  max-width: 325px;
-  border: solid 8px #9f7f00;
-  border-radius: 20px;
-  -webkit-box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.7);
-  box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.7);
 }
 
 .floop-link {
@@ -130,7 +132,7 @@ body {
 
 @media (hover: hover) {
   .floop-link:hover {
-    transform: translate(12px);
+    transform: translate(10px);
     transition: 250ms;
   }
 }
@@ -138,6 +140,13 @@ body {
 .floop-link > svg {
   height: 30px;
   width: 30px;
+}
+
+@media screen and (min-width: 500px) {
+  .content-text,
+  .floop-dash {
+    max-width: 450px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -150,7 +159,7 @@ body {
 
   .content-text,
   .floop-dash {
-    max-width: 625px;
+    max-width: 575px;
   }
 
   .name {
@@ -169,24 +178,12 @@ body {
 
 @media screen and (min-width: 1080px) {
   .dashed-line {
-    right: 25%;
-    bottom: -50%;
+    right: 30%;
+    bottom: -35%;
   }
 
   .content {
     flex-direction: row;
-  }
-
-  .content-text,
-  .floop-dash {
-    max-width: 500px;
-  }
-}
-
-@media screen and (min-width: 1366px) {
-  .dashed-line {
-    right: 30%;
-    bottom: -50%;
   }
 }
 
@@ -195,8 +192,12 @@ body {
     max-width: 900px;
   }
 
+  .content-text {
+    max-width: 650px;
+  }
+
   .dashed-line {
     right: 30%;
-    bottom: -25%;
+    bottom: -10%;
   }
 }
