@@ -54,7 +54,7 @@ body {
   padding: 16px;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .content {
@@ -100,15 +100,9 @@ body {
   display: block;
   position: absolute;
   right: -75%;
-  overflow: hidden;
+  overflow-x: hidden;
   bottom: 50%;
   z-index: -1;
-}
-
-.dashed-line-path {
-  stroke-dasharray: 10;
-  stroke-dashoffset: 500;
-  animation: dash 2s linear forwards;
 }
 
 .floop-dash {
@@ -173,14 +167,26 @@ body {
   }
 }
 
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1080px) {
   .dashed-line {
-    right: 50%;
-    bottom: -25%;
+    right: 25%;
+    bottom: -50%;
   }
 
   .content {
     flex-direction: row;
+  }
+
+  .content-text,
+  .floop-dash {
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .dashed-line {
+    right: 30%;
+    bottom: -50%;
   }
 }
 
@@ -188,10 +194,9 @@ body {
   .floop-dash {
     max-width: 900px;
   }
-}
 
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
+  .dashed-line {
+    right: 30%;
+    bottom: -25%;
   }
 }
