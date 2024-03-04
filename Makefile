@@ -11,7 +11,7 @@ clean:
 
 build:
 	@echo "Building..."
-	@go build -tags netgo -a -v -o dist/$(BINARY_NAME) main.go
+	@go build -o dist/$(BINARY_NAME) main.go
 
 run:
 	@echo "Running..."
