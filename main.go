@@ -8,6 +8,8 @@ import (
 	"net/http"
 )
 
+// What an awesome comment!
+
 //go:embed static
 var static embed.FS
 
