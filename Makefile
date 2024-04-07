@@ -1,18 +1,24 @@
-.PHONY: all clean build run
-
 BINARY_NAME=my-website
 
-all: clean build run
-
-clean:
-	@echo "Cleaning up..."
-	@go clean
-	@rm dist/$(BINARY_NAME)
+all: clean format build run
 
 build:
 	@echo "Building..."
-	@go build -o dist/$(BINARY_NAME) main.go
+	@go build -o bin/$(BINARY_NAME) cmd/main.go
+
+clean:
+	@echo "Cleaning..."
+	@go clean
+	@if [ -e bin/$(BINARY_NAME) ]; then rm bin/$(BINARY_NAME); fi
+
+format:
+	@echo "Formatting..."
+	@go fmt ./...
 
 run:
 	@echo "Running..."
-	@./dist/$(BINARY_NAME)
+	@./bin/$(BINARY_NAME)
+
+test:
+	@echo "Testing..."
+	@go test ./...
