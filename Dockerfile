@@ -1,20 +1,15 @@
-# Use the official Ubuntu image as the base image
-FROM ubuntu:latest
+FROM golang:1.18 as build
 
-# Set the working directory inside the container
-WORKDIR /app
+WORKDIR /go/src/app
 
-# Copy pre-built binary into the container
-COPY bin/my-website /app/my-website
+COPY . .
 
-# Copy all static files into the container
-COPY static /app/static
+RUN go mod download
 
-# Copy all template files into the container
-COPY template /app/template
+RUN CGO_ENABLED=0 go build -o /go/bin/app cmd/main.go
 
-# Expose port 8080 to run the application
-EXPOSE 8080
+FROM gcr.io/distroless/static-debian11
 
-# Command to run the application
-CMD ["./my-website"]
+COPY --from=build /go/bin/app /
+
+CMD ["./app"]
