@@ -1,15 +1,21 @@
-FROM golang:1.18 as build
+FROM golang:1.22.4-bullseye as base
 
-WORKDIR /go/src/app
+WORKDIR /
 
 COPY . .
 
 RUN go mod download
 
-RUN CGO_ENABLED=0 go build -o /go/bin/app cmd/main.go
+RUN go mod verify
 
-FROM gcr.io/distroless/static-debian11
+RUN GO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -o /app cmd/main.go
 
-COPY --from=build /go/bin/app /
+FROM gcr.io/distroless/base-debian12
 
-CMD ["./app"]
+COPY --from=base /app .
+
+COPY static /static
+
+COPY template /template
+
+CMD ["/app"]
