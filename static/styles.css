@@ -150,7 +150,7 @@ button>span>svg {
   font-size: 3rem;
   font-weight: 700;
   color: var(--tw-neutral-100);
-  letter-spacing: -6px;
+  letter-spacing: -4px;
 }
 
 .showcase__cards {
@@ -191,7 +191,32 @@ button>span>svg {
 
 .lang {
   display: flex;
-  gap: 8px;
+  align-items: center;
+  gap: 5px;
+}
+
+.go__dot {
+  fill: var(--tw-cyan-500);
+}
+
+.html__dot {
+  fill: var(--tw-red-500);
+}
+
+.css__dot {
+  fill: var(--tw-purple-500);
+}
+
+.docker__dot {
+  fill: var(--tw-slate-500);
+}
+
+.typescript__dot {
+  fill: var(--tw-blue-500);
+}
+
+.postgres__dot {
+  fill: var(--tw-blue-400);
 }
 
 .card__title {
