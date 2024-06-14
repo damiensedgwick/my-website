@@ -1,41 +1,26 @@
 {{ block "index" . }}
 <!DOCTYPE html>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Damien Sedgwick | Senior Frontend Engineer | Product Engineer</title>
-  <meta name="description"
-    content="Seasoned developer with a knack for building things... and occasionally breaking them. Led Floop (RIP) into the sunset, but the lessons learned are paving the way for my next digital adventure.">
-  <link href="static/twcolors.min.css" rel="stylesheet">
-  <link href="static/styles.css" rel="stylesheet">
-  <script src="static/htmx.min.js"></script>
-</head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="static/favicon.png" />
+    <title>Damien Sedgwick | Senior Frontend Engineer | Product Engineer</title>
+    <meta
+      name="description"
+      content="Seasoned developer with a knack for building things... and occasionally breaking them. Led Floop (RIP) into the sunset, but the lessons learned are paving the way for my next digital adventure."
+    />
+    <link href="static/twcolors.min.css" rel="stylesheet" />
+    <link href="static/styles.css" rel="stylesheet" />
+  </head>
 
-<body>
-  <main>
-    <p>
-      <i>If you build it, they will come...</i>
-    </p>
-  </main>
-
-  <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", (event) => {
-      document.body.addEventListener('htmx:beforeSwap', function (evt) {
-        if (evt.detail.xhr.status === 422 || evt.detail.xhr.status === 500) {
-          console.log("setting status to paint");
-          // allow 422 responses to swap as we are using this as a signal that
-          // a form was submitted with bad data and want to rerender with the
-          // errors
-          //
-          // set isError to false to avoid error logging in console
-          evt.detail.shouldSwap = true;
-          evt.detail.isError = false;
-        }
-      });
-    });
-  </script>
-</body>
-
+  <body>
+    <main>
+      <p>
+        <i>If you build it, they will come...</i>
+      </p>
+    </main>
+  </body>
 </html>
 {{ end }}
