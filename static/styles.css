@@ -353,3 +353,33 @@ main {
     max-width: 1400px;
   }
 }
+
+@keyframes twinkle {
+
+  0%,
+  100% {
+    fill: #e6e6e6;
+  }
+
+  33% {
+    fill: #00bfa6;
+  }
+
+  66% {
+    fill: #ffffff;
+  }
+}
+
+.git__square-one {
+  animation: twinkle 2s infinite;
+}
+
+.git__square-two {
+  animation: twinkle 2s infinite 0.5s;
+  /* delay for staggered effect */
+}
+
+.git__square-three {
+  animation: twinkle 2s infinite 1s;
+  /* delay for staggered effect */
+}
