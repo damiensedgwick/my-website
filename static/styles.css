@@ -289,11 +289,6 @@ main {
     letter-spacing: -10px;
   }
 
-  .profile__image>svg {
-    width: 500px;
-    height: 435px;
-  }
-
   .showcase__title {
     font-size: 4rem;
     letter-spacing: -8px;
@@ -313,7 +308,7 @@ main {
   .container__content {
     height: 100%;
     max-width: 1200px;
-    gap: 100px;
+    justify-content: space-between;
   }
 
   .main__content {
@@ -323,6 +318,17 @@ main {
     align-items: center;
   }
 
+  .profile__content {
+    max-width: 500px;
+    gap: 30px;
+  }
+
+  .profile__image {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1536px) {
   .profile__content {
     max-width: 600px;
     gap: 35px;
