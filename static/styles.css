@@ -203,6 +203,12 @@ main {
   color: var(--tw-neutral-100);
 }
 
+.card__title-info {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--tw-orange-300);
+}
+
 .card__stars {
   display: flex;
   align-items: center;
