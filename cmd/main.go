@@ -18,7 +18,7 @@ func newTemplate() *Template {
 	}
 }
 
-func (t *Template) Render(w io.Writer, name string, data interface{}) error {
+func (t *Template) Render(w io.Writer, name string, data interface{}, c echo.Context) error {
 	return t.tmpl.ExecuteTemplate(w, name, data)
 }
 
